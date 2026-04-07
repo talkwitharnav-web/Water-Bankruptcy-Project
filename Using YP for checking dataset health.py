@@ -17,7 +17,7 @@ from pathlib import Path
 # Finding working directory!
 BASE_DIR = Path(__file__).parent
 # Defining where the dataset is
-DATA_FILE = BASE_DIR / "US_water_consumption_2000_2025.csv"
+DATA_FILE = BASE_DIR / "im3_open_source_data_center_atlas (data centers in US).csv"
 # Getting file size in MB to determine how much yp should dig into the dataset
 # .stat().st_size gets file size in bytes. We divide by 1024 twice to get it into MB.
 FILE_SIZE_MB = DATA_FILE.stat().st_size / (1024 * 1024)
