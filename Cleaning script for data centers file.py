@@ -1,4 +1,6 @@
 import pandas as pd
+from pathlib import Path
+
 df = pd.read_csv("im3_open_source_data_center_atlas (data centers in US).csv")
 print(len(df),"rows before editing anything")
 """ If "operator", "ref", and "name" columns are all missing a value, drop that specific row.
@@ -15,3 +17,13 @@ has_name = df["name"].notna()
 # Now remove the row if it lacks operator and name
 df = df[has_operator | has_name]
 print(len(df),"rows after dropping rows with no operator and no name")
+# (For PowerBI) Now we create a new column called "Map_Location" and combine state and county into one
+# column and seperate them by a comma. This makes it easy for PowerBI to read the location of the data
+# center and make a geomap accordingly.
+df["Map_Location"] = df["state"] + ", " + df["county"]
+
+# Get path for clean dataset folder
+clean_folder = Path("Clean Datasets")
+# Save to the new folder
+df.to_csv(clean_folder / "cleaned_data_center_atlas.csv", index=False)
+print(f"Cleaned file saved to: {clean_folder}/cleaned_data_center_atlas.csv")
