@@ -17,16 +17,29 @@ from pathlib import Path
 # Finding working directory!
 BASE_DIR = Path(__file__).parent
 # Defining where the dataset is
-DATA_FILE = BASE_DIR / "global_water_consumption_2000_2025.csv"
+DATA_FILE = BASE_DIR / "US_water_consumption_2000_2025.csv"
+# Getting file size in MB to determine how much yp should dig into the dataset
+# .stat().st_size gets file size in bytes. We divide by 1024 twice to get it into MB.
+FILE_SIZE_MB = DATA_FILE.stat().st_size / (1024 * 1024)
 # Defining where the report should be saved
 REPORT_DIR = BASE_DIR / "HTML reports by yp"
-df = pd.read_csv("global_water_consumption_2000_2025.csv")
+df = pd.read_csv(DATA_FILE)
 
 """ "minimal" is an arguement that determines how much yp should dig into the dataset.
    The bigger the dataset, the less complex analysis yp does to save your hardware
   ".stem" cuts the file type and only gives the name of the file, eg instead of:
   "global_water_consumption_2000_2025.csv" it gives "global_water_consumption_2000_2025"
 """
-profile = ProfileReport(df, title=f"Health Check for {DATA_FILE.stem}", minimal = False)
+# Check file size and automatically determine how much yp should dig into dataset.
+# If file size is larger than 50MB, minimal = True that way the laptop doesn't crash,
+# else minimal = False so we can squeeze as much information out of dataset as possible.
+if FILE_SIZE_MB > 50:
+    minimal = True
+    print("Setting minimal = True")
+else:
+    minimal = False
+    print("Setting minimal = False")
+# Generate report and save it to Report directory.
+profile = ProfileReport(df, title=f"Health Check for {DATA_FILE.stem}", minimal = minimal)
 output_path = REPORT_DIR / f"{DATA_FILE.stem}_report.html"
 profile.to_file(output_path)
