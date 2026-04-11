@@ -15,6 +15,7 @@ import pandas as pd
 from ydata_profiling import ProfileReport
 from pathlib import Path
 # Finding working directory!
+# .parent arguement makes it so it finds the folder in which this py file is in (our working directory) instead of just this file.
 BASE_DIR = Path(__file__).parent
 # Defining where the dataset is
 DATA_FILE = BASE_DIR / "Clean Datasets" / "Cleaned Global Groundwater Monitoring Network dataset.csv"
@@ -40,6 +41,13 @@ else:
     minimal = False
     print("Setting minimal = False")
 # Generate report and save it to Report directory.
+# Creating ProfileReport object with our three arguements. yp automatically looks for this class and generates the report
+# based on the arguements we give it.
 profile = ProfileReport(df, title=f"Health Check for {DATA_FILE.stem}", minimal = minimal)
 output_path = REPORT_DIR / f"{DATA_FILE.stem}_report.html"
 profile.to_file(output_path)
+
+
+
+
+# NOTE TO SELF MONITORING FILE ID AND GGMN BIG DATASET ORIGINAL ID PROBABLY MATCH ACCORDING TO CLAUDE
