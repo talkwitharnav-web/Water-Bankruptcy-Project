@@ -18,7 +18,7 @@ from pathlib import Path
 # .parent arguement makes it so it finds the folder in which this py file is in (our working directory) instead of just this file.
 BASE_DIR = Path(__file__).parent
 # Defining where the dataset is
-DATA_FILE = BASE_DIR / "Clean Datasets" / "Cleaned Global Groundwater Monitoring Network dataset.csv"
+DATA_FILE = BASE_DIR / "Clean Datasets" / "Cleaned USDA NASS dataset.csv"
 # Getting file size in MB to determine how much yp should dig into the dataset
 # .stat().st_size gets file size in bytes. We divide by 1024 twice to get it into MB.
 FILE_SIZE_MB = DATA_FILE.stat().st_size / (1024 * 1024)
@@ -46,8 +46,3 @@ else:
 profile = ProfileReport(df, title=f"Health Check for {DATA_FILE.stem}", minimal = minimal)
 output_path = REPORT_DIR / f"{DATA_FILE.stem}_report.html"
 profile.to_file(output_path)
-
-
-
-
-# NOTE TO SELF MONITORING FILE ID AND GGMN BIG DATASET ORIGINAL ID PROBABLY MATCH ACCORDING TO CLAUDE
