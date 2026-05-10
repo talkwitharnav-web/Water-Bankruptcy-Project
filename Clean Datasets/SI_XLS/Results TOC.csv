@@ -1,0 +1,27 @@
+List of tables,Unnamed: 1,Unnamed: 2
+,,
+Table 1,"Sensitivity Analysis 1 (Geographical Attribution Boundary): water, carbon, and water scarcity footprints for six geographical attribution method for each subbasin (8-digit Hydrologic Unit Code) in the CONUS. ",
+Table 2,Sensitivity Analysis 2 (Reservoir Evaporation Attribution): Water and water scarcity footprint for different hydroelectric water use assumptions.,
+Table 3,"Water footprint, carbon footprint, and water scarcity footprint of a hypothetical 1 MW data centers placed within each US subbasin.",
+,,
+,,
+Legend,,
+,Variable,Description
+Table 1,PCA,"Power control area (PCA) as attribution boundary for electricity production and consumption, considering the inter PCA electricity supply and demands balance within their jurisdiction."
+,PCA_NT,"Power control area (PCA) as attribution boundary for electricity production and consumption, not taking into consideration the inter PCA electricity supply and demands balnace."
+,HUC4,Subbasins (4-digit Hydrologic Unit Code)  as attribution boundary for electricity production and consumption.
+,Inter-connection,Grid infrastructure based interconnections boundaries as attribution boundary for electricity production and consumption.
+,eGRID,EPA's eGRID subregions that confroms grid infrastructure as attribution boundary for electricity production and consumption.
+,State,State boundaries as attribution boundary for electricity production and consumption.
+,WF_Coefficient of Variation,Coefficient of variation for attribution methods of water footprint estimation
+,CF_Coefficient of  Variation,Coefficient of variation for attribution methods of carbon footprint estimation
+,Characterization Factor,Water availability minus demand factor of a watershed realtive to the US average. This factor was used to estimate water scarcity footprint
+,Region,Geographical region to which values belong. See Figure S3 of SI.
+Table 2,Primary Purpose,Evaporation from reservoir is solely assigned to the reservoir's primary purpose
+,All To Hydro,All evaporation from a reservoir generating hydroelectricity is assigned to hydroelectricity production
+,Non To Hydro,"No evaporation is assigned to hydroelectricity production, water intensity of hydroelectricity generation is assumed to be zero."
+,Equal Weight,Evaporation from a reservoir is assigned equally among all reservoir purposes
+,Centroid,A regional coefficient is applied for water intensity of hydroelectricity for that region
+Table 3,WSF_1MW_DC,Water scarcity footprint (m3-eq/MWh) for a 1 MW data center installed across the subbasins in the US
+,WF_1MW_DC,Water footprint (m3/MWh) for a 1 MW data center installed across the subbasins in the US
+,CF_1MW_DC,Carbon footprint (tons/MWh) for a 1 MW data center installed across the subbasins in the US

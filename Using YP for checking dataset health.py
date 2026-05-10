@@ -18,7 +18,7 @@ from pathlib import Path
 # .parent arguement makes it so it finds the folder in which this py file is in (our working directory) instead of just this file.
 BASE_DIR = Path(__file__).parent
 # Defining where the dataset is
-DATA_FILE = BASE_DIR / "Clean Datasets" / "Cleaned USGS_AGRICULTURE_DATASET.csv"
+DATA_FILE = BASE_DIR / "Clean Datasets" / "US_water_consumption_2000_2025.csv"
 # Getting file size in MB to determine how much yp should dig into the dataset
 # .stat().st_size gets file size in bytes. We divide by 1024 twice to get it into MB.
 FILE_SIZE_MB = DATA_FILE.stat().st_size / (1024 * 1024)
@@ -43,6 +43,7 @@ else:
 # Generate report and save it to Report directory.
 # Creating ProfileReport object with our three arguements. yp automatically looks for this class and generates the report
 # based on the arguements we give it.
+# .stem just gives the name of the file without file type, makes it look cleaner
 profile = ProfileReport(df, title=f"Health Check for {DATA_FILE.stem}", minimal = minimal)
 output_path = REPORT_DIR / f"{DATA_FILE.stem}_report.html"
 profile.to_file(output_path)

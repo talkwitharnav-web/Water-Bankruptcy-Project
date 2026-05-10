@@ -1,0 +1,443 @@
+Table 3,Inter PCA electricity transfers to match electricity supply with electricity demand,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
+,,,,,,,
+Responded PCA ID,Responded PCA Name,Reporting Year,Connecting PCA,Connecting PCA ID,Electricity Generation (MWh),Import ratio,Water intensity (m3/MWH)
+140,City of Tallahassee,2018,Duke Energy Florida Inc,234,2848324.999,0,0.8500088276060058
+140,City of Tallahassee,2018,Tampa Electric Company,262,2848324.999,0,1.063299417686789
+140,City of Tallahassee,2018,Florida Power & Light Company,171,2848324.999,0,1.1321172649537152
+140,City of Tallahassee,2018,Florida Municipal Power Pool,170,2848324.999,0,1.3588676825566617
+140,City of Tallahassee,2018,"Southern Company Services, Inc. - Trans",253,2848324.999,0,7.470213150593904
+161,"Electric Energy, Inc.",2018,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,197,4842077.001,0,1.6929224321797205
+161,"Electric Energy, Inc.",2018,Tennessee Valley Authority,263,4842077.001,0,4.789864489011681
+161,"Electric Energy, Inc.",2018,"Midcontinent Independent Transmission System Operator, Inc..",321,4842077.001,0,5.099090482862521
+171,Florida Power & Light Company,2018,Duke Energy Florida Inc,234,124869508.191,0,0.8500088276060058
+171,Florida Power & Light Company,2018,Gainesville Regional Utilities,172,124869508.191,0,1.2304862431181307
+171,Florida Power & Light Company,2018,City of Homestead,136,124869508.191,0,0
+171,Florida Power & Light Company,2018,JEA,186,124869508.191,0,1.2319722054735114
+171,Florida Power & Light Company,2018,"New Smyrna Beach, Utilities Commission of",325,124869508.191,0,0
+171,Florida Power & Light Company,2018,Florida Municipal Power Pool,170,124869508.191,0,1.3588676825566617
+171,Florida Power & Light Company,2018,"Southern Company Services, Inc. - Trans",253,124869508.191,0,7.470213150593904
+171,Florida Power & Light Company,2018,Seminole Electric Cooperative,248,124869508.191,0,0.9956109951202573
+171,Florida Power & Light Company,2018,Tampa Electric Company,262,124869508.191,0,1.063299417686789
+243,Balancing Authority of Northern California,2018,Bonneville Power Administration,122,7971045.003,0.33848376749396886,6.300550623967492
+243,Balancing Authority of Northern California,2018,California Independent System Operator,125,7971045.003,0.004216788140277097,2.006518725988799
+243,Balancing Authority of Northern California,2018,Turlock Irrigation District,267,7971045.003,0.014447468679999268,90.22952663207539
+243,Balancing Authority of Northern California,2018,"NaturEner Power Watch, LLC (GWA)",324_1,7971045.003,0,0.0038
+186,JEA,2018,Florida Municipal Power Pool,170,10440143.548,1.6950151742855376e-06,1.3588676825566617
+186,JEA,2018,Florida Power & Light Company,171,10440143.548,0.20006598396751574,1.1321172649537152
+186,JEA,2018,Seminole Electric Cooperative,248,10440143.548,0.0015269732532570632,0.9956109951202573
+186,JEA,2018,"Southern Company Services, Inc. - Trans",253,10440143.548,0.00020095346566251872,7.470213150593904
+267,Turlock Irrigation District,2018,Balancing Authority of Northern California,243,1728748.003,0.08016794374032207,4.111589067074509
+267,Turlock Irrigation District,2018,California Independent System Operator,125,1728748.003,0.27934887812621556,2.006518725988799
+118,"Associated Electric Cooperative, Inc.",2018,"Midcontinent Independent Transmission System Operator, Inc..",321,25827820.006,0,5.099090482862521
+118,"Associated Electric Cooperative, Inc.",2018,Southwest Power Pool,257,25827820.006,0,4.96399025629377
+118,"Associated Electric Cooperative, Inc.",2018,Southwestern Power Administration,258,25827820.006,0,3.1432513429544837
+118,"Associated Electric Cooperative, Inc.",2018,Tennessee Valley Authority,263,25827820.006,0,4.789864489011681
+236,Public Service Company of New Mexico,2018,Arizona Public Service Company,116,12024006.002,0.017192562250878098,2.0040115317198595
+236,Public Service Company of New Mexico,2018,El Paso Electric Company,160,12024006.002,0.0003227698415934697,1.1701701485480824
+236,Public Service Company of New Mexico,2018,Public Service Company of Colorado,235,12024006.002,0.010592790099416157,1.1680303501931952
+236,Public Service Company of New Mexico,2018,Tucson Electric Power Company,266,12024006.002,0.003377221624756075,0.8265024263894547
+236,Public Service Company of New Mexico,2018,Western Area Power Administration - Rocky Mountain Region,273,12024006.002,0.003210201218665119,2.026212246273502
+236,Public Service Company of New Mexico,2018,Southwestern Power Administration,258,12024006.002,0.00033521291810833045,3.1432513429544837
+236,Public Service Company of New Mexico,2018,Gridforce South,323,12024006.002,0.012418659204201528,0.0037999999999999996
+232,Portland General Electric Company,2018,Avista Corporation,119,12827697,0,0.47394010075583065
+232,Portland General Electric Company,2018,Bonneville Power Administration,122,12827697,0.21738651771645343,6.300550623967492
+232,Portland General Electric Company,2018,Public Utility District No. 1 of Chelan County,237,12827697,0,0
+232,Portland General Electric Company,2018,PUD No. 1 of Douglas County,238,12827697,0,0
+232,Portland General Electric Company,2018,"Public Utility District No. 2 of Grant County, Washington",239,12827697,0,0
+232,Portland General Electric Company,2018,"NaturEner Power Watch, LLC (GWA)",324_1,12827697,4.6468566488122476e-07,0.0038
+232,Portland General Electric Company,2018,NorthWestern Energy (NWMT),217,12827697,0.0005682989510081159,35.40090885455338
+232,Portland General Electric Company,2018,PacifiCorp - West,229,12827697,0.035161753570241164,1.0397518051488805
+232,Portland General Electric Company,2018,Puget Sound Energy,240,12827697,0,3.305861800084799
+103,"Alcoa Power Generating, Inc. - Yadkin Division",2018,Duke Energy Carolinas,157,1069253.997,0,14.311913562186774
+103,"Alcoa Power Generating, Inc. - Yadkin Division",2018,Duke Energy Progress West,233,1069253.997,0,0.0076
+197,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,2018,"PJM Interconnection, LLC",230,38975997.996,0,1.8860649401436647
+197,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,2018,"Electric Energy, Inc.",161,38975997.996,0,1.8467030937013373
+197,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,2018,Ohio Valley Electric Corporation,219,38975997.996,0,1.847267247914201
+197,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,2018,Tennessee Valley Authority,263,38975997.996,0,4.789864489011681
+197,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,2018,"Midcontinent Independent Transmission System Operator, Inc..",321,38975997.996,0,5.099090482862521
+136,City of Homestead,2018,Florida Power & Light Company,171,-815.999,1.0014518340967002,1.1321172649537152
+160,El Paso Electric Company,2018,Southwestern Power Administration,258,5531714.43,0.00605728134298485,3.1432513429544837
+160,El Paso Electric Company,2018,Public Service Company of New Mexico,236,5531714.43,0.2765726436852081,1.8562746718748229
+160,El Paso Electric Company,2018,Tucson Electric Power Company,266,5531714.43,0.09178718966438264,0.8265024263894547
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Bonneville Power Administration,122,2718624.001,0.44382824119643666,6.300550623967492
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Puget Sound Energy,240,2718624.001,0.0007025624012845576,3.305861800084799
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Avista Corporation,119,2718624.001,0,0.47394010075583065
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,"Public Utility District No. 2 of Grant County, Washington",239,2718624.001,0,0
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Los Angeles Department of Water and Power,194,2718624.001,0,1.0749511071495452
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Idaho Power Company,180,2718624.001,0,14.149625554728045
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Balancing Authority of Northern California,243,2718624.001,0,4.111589067074509
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,California Independent System Operator,125,2718624.001,0,2.006518725988799
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,NorthWestern Energy (NWMT),217,2718624.001,0,35.40090885455338
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Turlock Irrigation District,267,2718624.001,0,90.22952663207539
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Nevada Power Company,210,2718624.001,0,1.0436487510347943
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Salt River Project,244,2718624.001,0,5.97609318776568
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Tucson Electric Power Company,266,2718624.001,0,0.8265024263894547
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Western Area Power Administration - Rocky Mountain Region,273,2718624.001,0,2.026212246273502
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,PacifiCorp - East,228,2718624.001,0,2.2516158127472954
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Public Service Company of New Mexico,236,2718624.001,0,1.8562746718748229
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,"NaturEner Power Watch, LLC (GWA)",324_1,2718624.001,0,0.0038
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Southwest Power Pool,257,2718624.001,0,4.96399025629377
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Imperial Irrigation District,182,2718624.001,0,2.149933056700461
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,Arizona Public Service Company,116,2718624.001,0,2.0040115317198595
+139,"City of Tacoma, Department of Public Utilities, Light Division",2018,El Paso Electric Company,160,2718624.001,0,1.1701701485480824
+210,Nevada Power Company,2018,California Independent System Operator,125,33607345.209,0.015436751005635024,2.006518725988799
+210,Nevada Power Company,2018,Los Angeles Department of Water and Power,194,33607345.209,0.09725807950273795,1.0749511071495452
+210,Nevada Power Company,2018,PacifiCorp - East,228,33607345.209,0.020873832645717582,2.2516158127472954
+210,Nevada Power Company,2018,Western Area Power Administration - Desert Southwest Region,272,33607345.209,0.035395190091704255,116.52028992053307
+210,Nevada Power Company,2018,Bonneville Power Administration,122,33607345.209,0.006035452445978672,6.300550623967492
+210,Nevada Power Company,2018,Idaho Power Company,180,33607345.209,0.007960766046190847,14.149625554728045
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Alberta Electric System Operator       ,329,5388631,0,0
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Avista Corporation,119,5388631,0,0.47394010075583065
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Avangrid Renewables LLC,AVRN,5388631,0,0.003808855530455872
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Arizona Public Service Company,116,5388631,0,2.0040115317198595
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Balancing Authority of Northern California,243,5388631,0,4.111589067074509
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Bonneville Power Administration,122,5388631,0,6.300550623967492
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Public Utility District No. 1 of Chelan County,237,5388631,0,0
+239,"Public Utility District No. 2 of Grant County, Washington",2018,California Independent System Operator,125,5388631,0,2.006518725988799
+239,"Public Utility District No. 2 of Grant County, Washington",2018,PUD No. 1 of Douglas County,238,5388631,0,0
+239,"Public Utility District No. 2 of Grant County, Washington",2018,El Paso Electric Company,160,5388631,0,1.1701701485480824
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Gridforce South,323,5388631,0,0.0037999999999999996
+239,"Public Utility District No. 2 of Grant County, Washington",2018,"Griffith Energy, LLC",315,5388631,0,1.075679940059496
+239,"Public Utility District No. 2 of Grant County, Washington",2018,"NaturEner Power Watch, LLC (GWA)",324_1,5388631,0,0.0038
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Imperial Irrigation District,182,5388631,0,2.149933056700461
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Idaho Power Company,180,5388631,0,14.149625554728045
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Los Angeles Department of Water and Power,194,5388631,0,1.0749511071495452
+239,"Public Utility District No. 2 of Grant County, Washington",2018,"Midcontinent Independent Transmission System Operator, Inc..",321,5388631,0,5.099090482862521
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Nevada Power Company,210,5388631,0,1.0436487510347943
+239,"Public Utility District No. 2 of Grant County, Washington",2018,NorthWestern Energy (NWMT),217,5388631,0,35.40090885455338
+239,"Public Utility District No. 2 of Grant County, Washington",2018,PacifiCorp - East,228,5388631,0,2.2516158127472954
+239,"Public Utility District No. 2 of Grant County, Washington",2018,PacifiCorp - West,229,5388631,0,1.0397518051488805
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Portland General Electric Company,232,5388631,0,3.2859692245773706
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Public Service Company of New Mexico,236,5388631,0,1.8562746718748229
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Public Service Company of Colorado,235,5388631,0,1.1680303501931952
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Puget Sound Energy,240,5388631,0,3.305861800084799
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Seattle City Light,247,5388631,0,1.741533667285393
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Salt River Project,244,5388631,0,5.97609318776568
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Southwest Power Pool,257,5388631,0,4.96399025629377
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Tucson Electric Power Company,266,5388631,0,0.8265024263894547
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Turlock Irrigation District,267,5388631,0,90.22952663207539
+239,"Public Utility District No. 2 of Grant County, Washington",2018,"City of Tacoma, Department of Public Utilities, Light Division",139,5388631,0,11.466546329932077
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Western Area Power Administration - Rocky Mountain Region,273,5388631,0,2.026212246273502
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Western Area Power Administration - Desert Southwest Region,272,5388631,0,116.52028992053307
+239,"Public Utility District No. 2 of Grant County, Washington",2018,Western Area Power Administration UGP West,275,5388631,0,45.894971229170245
+239,"Public Utility District No. 2 of Grant County, Washington",2018,"NaturEner Wind Watch, LLC",324,5388631,0,0.0037999999999999996
+237,Public Utility District No. 1 of Chelan County,2018,Bonneville Power Administration,122,9283644.999,0,6.300550623967492
+237,Public Utility District No. 1 of Chelan County,2018,Puget Sound Energy,240,9283644.999,0,3.305861800084799
+237,Public Utility District No. 1 of Chelan County,2018,Avista Corporation,119,9283644.999,0,0.47394010075583065
+237,Public Utility District No. 1 of Chelan County,2018,PUD No. 1 of Douglas County,238,9283644.999,0,0
+237,Public Utility District No. 1 of Chelan County,2018,"Public Utility District No. 2 of Grant County, Washington",239,9283644.999,0,0
+237,Public Utility District No. 1 of Chelan County,2018,Portland General Electric Company,232,9283644.999,0,3.2859692245773706
+237,Public Utility District No. 1 of Chelan County,2018,PacifiCorp - West,229,9283644.999,0,1.0397518051488805
+237,Public Utility District No. 1 of Chelan County,2018,Gridforce South,323,9283644.999,0,0.0037999999999999996
+251,South Carolina Public Service Authority,2018,Duke Energy Progress West,233,17658016.999,0.04853939382751407,0.0076
+251,South Carolina Public Service Authority,2018,South Carolina Electric & Gas Company,250,17658016.999,0.14759348560233868,47.53872725138729
+251,South Carolina Public Service Authority,2018,"Southern Company Services, Inc. - Trans",253,17658016.999,0.07593021934436599,7.470213150593904
+251,South Carolina Public Service Authority,2018,Duke Energy Carolinas,157,17658016.999,0.00772035004965421,14.311913562186774
+251,South Carolina Public Service Authority,2018,Southeastern Power Administration,338,17658016.999,0.004856311626292649,809.60948359527
+251,South Carolina Public Service Authority,2018,Southeastern Power Administration,338,17658016.999,0.006714066279283931,809.60948359527
+230,"PJM Interconnection, LLC",2018,Duke Energy Progress West,233,812965840.178,0,0.0076
+230,"PJM Interconnection, LLC",2018,Duke Energy Carolinas,157,812965840.178,0,14.311913562186774
+230,"PJM Interconnection, LLC",2018,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,197,812965840.178,0,1.6929224321797205
+230,"PJM Interconnection, LLC",2018,"Midcontinent Independent Transmission System Operator, Inc..",321,812965840.178,0,5.099090482862521
+230,"PJM Interconnection, LLC",2018,New York Independent System Operator,211,812965840.178,0,1.6852517502874698
+230,"PJM Interconnection, LLC",2018,Ohio Valley Electric Corporation,219,812965840.178,0,1.847267247914201
+230,"PJM Interconnection, LLC",2018,Tennessee Valley Authority,263,812965840.178,0,4.789864489011681
+116,Arizona Public Service Company,2018,California Independent System Operator,125,17517673.997,0,2.006518725988799
+116,Arizona Public Service Company,2018,Gridforce South,323,17517673.997,0,0.0037999999999999996
+116,Arizona Public Service Company,2018,Imperial Irrigation District,182,17517673.997,0,2.149933056700461
+116,Arizona Public Service Company,2018,Los Angeles Department of Water and Power,194,17517673.997,0,1.0749511071495452
+116,Arizona Public Service Company,2018,PacifiCorp - East,228,17517673.997,0,2.2516158127472954
+116,Arizona Public Service Company,2018,Public Service Company of New Mexico,236,17517673.997,0,1.8562746718748229
+116,Arizona Public Service Company,2018,Salt River Project,244,17517673.997,0,5.97609318776568
+116,Arizona Public Service Company,2018,Tucson Electric Power Company,266,17517673.997,0,0.8265024263894547
+116,Arizona Public Service Company,2018,Western Area Power Administration - Rocky Mountain Region,273,17517673.997,0,2.026212246273502
+116,Arizona Public Service Company,2018,Western Area Power Administration - Desert Southwest Region,272,17517673.997,0,116.52028992053307
+233,Duke Energy Progress West,2018,"PJM Interconnection, LLC",230,1959,0.23122787154980637,1.8860649401436647
+233,Duke Energy Progress West,2018,Tennessee Valley Authority,263,1959,0.02377714989222975,4.789864489011681
+233,Duke Energy Progress West,2018,South Carolina Public Service Authority,251,1959,0.0763014390625674,1.5120377071822138
+233,Duke Energy Progress West,2018,Duke Energy Carolinas,157,1959,0.5780214985407888,14.311913562186774
+233,Duke Energy Progress West,2018,South Carolina Electric & Gas Company,250,1959,0.08943070071268891,47.53872725138729
+248,Seminole Electric Cooperative,2018,Duke Energy Florida Inc,234,11356093,0,0.8500088276060058
+248,Seminole Electric Cooperative,2018,Florida Power & Light Company,171,11356093,0,1.1321172649537152
+248,Seminole Electric Cooperative,2018,Tampa Electric Company,262,11356093,0,1.063299417686789
+248,Seminole Electric Cooperative,2018,JEA,186,11356093,0,1.2319722054735114
+266,Tucson Electric Power Company,2018,Arizona Public Service Company,116,12325992.038,0.056960535411091924,2.0040115317198595
+266,Tucson Electric Power Company,2018,Public Service Company of New Mexico,236,12325992.038,0.005214462840229869,1.8562746718748229
+266,Tucson Electric Power Company,2018,Salt River Project,244,12325992.038,0,5.97609318776568
+266,Tucson Electric Power Company,2018,El Paso Electric Company,160,12325992.038,0,1.1701701485480824
+266,Tucson Electric Power Company,2018,Western Area Power Administration - Desert Southwest Region,272,12325992.038,0.02003605087753777,116.52028992053307
+266,Tucson Electric Power Company,2018,Western Area Power Administration - Rocky Mountain Region,273,12325992.038,0.038563793360594394,2.026212246273502
+266,Tucson Electric Power Company,2018,"Gila River Power, LLC",154,12325992.038,0,1.027925218718749
+217,NorthWestern Energy (NWMT),2018,Bonneville Power Administration,122,18647814.999,0.019286323735267057,6.300550623967492
+217,NorthWestern Energy (NWMT),2018,PacifiCorp - East,228,18647814.999,0.004537169598836058,2.2516158127472954
+217,NorthWestern Energy (NWMT),2018,PacifiCorp - West,229,18647814.999,0.004875891951986218,1.0397518051488805
+217,NorthWestern Energy (NWMT),2018,Portland General Electric Company,232,18647814.999,0.009581303758000558,3.2859692245773706
+217,NorthWestern Energy (NWMT),2018,Puget Sound Energy,240,18647814.999,0.02156103244521367,3.305861800084799
+217,NorthWestern Energy (NWMT),2018,Avista Corporation,119,18647814.999,0.00786803728156839,0.47394010075583065
+217,NorthWestern Energy (NWMT),2018,"NaturEner Power Watch, LLC (GWA)",324_1,18647814.999,0.002715175273356064,0.0038
+217,NorthWestern Energy (NWMT),2018,Western Area Power Administration UGP West,275,18647814.999,0.006020097679861909,45.894971229170245
+217,NorthWestern Energy (NWMT),2018,Idaho Power Company,180,18647814.999,0,14.149625554728045
+217,NorthWestern Energy (NWMT),2018,Alberta Electric System Operator       ,329,18647814.999,0,0
+217,NorthWestern Energy (NWMT),2018,"NaturEner Wind Watch, LLC",324,18647814.999,0.003339724206468698,0.0037999999999999996
+101,PowerSouth Energy Cooperative,2018,"Southern Company Services, Inc. - Trans",253,5696368.998,0,7.470213150593904
+101,PowerSouth Energy Cooperative,2018,"Midcontinent Independent Transmission System Operator, Inc..",321,5696368.998,0,5.099090482862521
+247,Seattle City Light,2018,Bonneville Power Administration,122,6440959.791,0.2582330765044791,6.300550623967492
+247,Seattle City Light,2018,Puget Sound Energy,240,6440959.791,0.051100316661694144,3.305861800084799
+247,Seattle City Light,2018,Avista Corporation,119,6440959.791,0,0.47394010075583065
+165,"Electric Reliability Council of Texas, Inc.",2018,Southwest Power Pool,257,404629252.377,0,4.96399025629377
+273,Western Area Power Administration - Rocky Mountain Region,2018,Arizona Public Service Company,116,45066372.319,0,2.0040115317198595
+273,Western Area Power Administration - Rocky Mountain Region,2018,PacifiCorp - East,228,45066372.319,0,2.2516158127472954
+273,Western Area Power Administration - Rocky Mountain Region,2018,Public Service Company of New Mexico,236,45066372.319,0,1.8562746718748229
+273,Western Area Power Administration - Rocky Mountain Region,2018,Public Service Company of Colorado,235,45066372.319,0,1.1680303501931952
+273,Western Area Power Administration - Rocky Mountain Region,2018,Salt River Project,244,45066372.319,0,5.97609318776568
+273,Western Area Power Administration - Rocky Mountain Region,2018,Southwest Power Pool,257,45066372.319,0,4.96399025629377
+273,Western Area Power Administration - Rocky Mountain Region,2018,Tucson Electric Power Company,266,45066372.319,0,0.8265024263894547
+273,Western Area Power Administration - Rocky Mountain Region,2018,Western Area Power Administration - Desert Southwest Region,272,45066372.319,0,116.52028992053307
+273,Western Area Power Administration - Rocky Mountain Region,2018,Western Area Power Administration UGP West,275,45066372.319,0,45.894971229170245
+263,Tennessee Valley Authority,2018,"Associated Electric Cooperative, Inc.",118,169376934.66,0.0010074879855203514,1.1889432716355663
+263,Tennessee Valley Authority,2018,Carolina Power & Light Company,233,169376934.66,0,0
+263,Tennessee Valley Authority,2018,Duke Energy Carolinas,157,169376934.66,8.094848750926399e-06,14.311913562186774
+263,Tennessee Valley Authority,2018,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,197,169376934.66,0.00047676779542218126,1.6929224321797205
+263,Tennessee Valley Authority,2018,"Midcontinent Independent Transmission System Operator, Inc..",321,169376934.66,0.01291399216291411,5.099090482862521
+263,Tennessee Valley Authority,2018,"Southern Company Services, Inc. - Trans",253,169376934.66,0.0029322933834235116,7.470213150593904
+263,Tennessee Valley Authority,2018,Southwest Power Pool,257,169376934.66,0,4.96399025629377
+180,Idaho Power Company,2018,Alberta Electric System Operator       ,329,14016736.495,0,0
+180,Idaho Power Company,2018,Arizona Public Service Company,116,14016736.495,0,2.0040115317198595
+180,Idaho Power Company,2018,Avista Corporation,119,14016736.495,0.017777468953519365,0.47394010075583065
+180,Idaho Power Company,2018,Avangrid Renewables LLC,AVRN,14016736.495,0,0.003808855530455872
+180,Idaho Power Company,2018,Balancing Authority of Northern California,243,14016736.495,0,4.111589067074509
+180,Idaho Power Company,2018,Bonneville Power Administration,122,14016736.495,0.002018939649514184,6.300550623967492
+180,Idaho Power Company,2018,California Independent System Operator,125,14016736.495,0,2.006518725988799
+180,Idaho Power Company,2018,Public Utility District No. 1 of Chelan County,237,14016736.495,0,0
+180,Idaho Power Company,2018,PUD No. 1 of Douglas County,238,14016736.495,0,0
+180,Idaho Power Company,2018,"NaturEner Power Watch, LLC (GWA)",324_1,14016736.495,0,0.0038
+180,Idaho Power Company,2018,"Public Utility District No. 2 of Grant County, Washington",239,14016736.495,0,0
+180,Idaho Power Company,2018,Imperial Irrigation District,182,14016736.495,0,2.149933056700461
+180,Idaho Power Company,2018,Los Angeles Department of Water and Power,194,14016736.495,0,1.0749511071495452
+180,Idaho Power Company,2018,Nevada Power Company,210,14016736.495,0.0014294881485365644,1.0436487510347943
+180,Idaho Power Company,2018,NorthWestern Energy (NWMT),217,14016736.495,0.002048184695676944,35.40090885455338
+180,Idaho Power Company,2018,PacifiCorp - East,228,14016736.495,0.12691367109849766,2.2516158127472954
+180,Idaho Power Company,2018,PacifiCorp - West,229,14016736.495,0,1.0397518051488805
+180,Idaho Power Company,2018,Portland General Electric Company,232,14016736.495,0,3.2859692245773706
+180,Idaho Power Company,2018,Public Service Company of Colorado,235,14016736.495,0,1.1680303501931952
+180,Idaho Power Company,2018,Public Service Company of New Mexico,236,14016736.495,0,1.8562746718748229
+180,Idaho Power Company,2018,Puget Sound Energy,240,14016736.495,0,3.305861800084799
+180,Idaho Power Company,2018,Salt River Project,244,14016736.495,0,5.97609318776568
+180,Idaho Power Company,2018,Seattle City Light,247,14016736.495,0,1.741533667285393
+180,Idaho Power Company,2018,Southwest Power Pool,257,14016736.495,0,4.96399025629377
+180,Idaho Power Company,2018,"City of Tacoma, Department of Public Utilities, Light Division",139,14016736.495,0,11.466546329932077
+180,Idaho Power Company,2018,Tucson Electric Power Company,266,14016736.495,0,0.8265024263894547
+180,Idaho Power Company,2018,Tucson Electric Power Company,266,14016736.495,0,0.8265024263894547
+180,Idaho Power Company,2018,Western Area Power Administration - Desert Southwest Region,272,14016736.495,0,116.52028992053307
+180,Idaho Power Company,2018,Western Area Power Administration UGP West,275,14016736.495,0,45.894971229170245
+180,Idaho Power Company,2018,Western Area Power Administration - Rocky Mountain Region,273,14016736.495,0,2.026212246273502
+274,Western Area Power Administration - Desert Southwest Region,2018,Arizona Public Service Company,116,16037102.004,0.047519368871562405,2.0040115317198595
+274,Western Area Power Administration - Desert Southwest Region,2018,Imperial Irrigation District,182,16037102.004,0.0004292712792333835,2.149933056700461
+274,Western Area Power Administration - Desert Southwest Region,2018,Los Angeles Department of Water and Power,194,16037102.004,0,1.0749511071495452
+274,Western Area Power Administration - Desert Southwest Region,2018,Nevada Power Company,210,16037102.004,0.022978454470657834,1.0436487510347943
+274,Western Area Power Administration - Desert Southwest Region,2018,Salt River Project,244,16037102.004,0,5.97609318776568
+274,Western Area Power Administration - Desert Southwest Region,2018,California Independent System Operator,125,16037102.004,0,2.006518725988799
+274,Western Area Power Administration - Desert Southwest Region,2018,Tucson Electric Power Company,266,16037102.004,0,0.8265024263894547
+274,Western Area Power Administration - Desert Southwest Region,2018,Western Area Power Administration - Rocky Mountain Region,273,16037102.004,0.02296641962327441,2.026212246273502
+274,Western Area Power Administration - Desert Southwest Region,2018,Gridforce South,323,16037102.004,0.013504664539124182,0.0037999999999999996
+133,Chugach Electric Assn Inc,2018,Anchorage Municipal Light & Power,112,964105.999,0,0.7185561490570075
+250,South Carolina Electric & Gas Company,2018,Duke Energy Progress West,233,27382506.259,0,0.0076
+250,South Carolina Electric & Gas Company,2018,Duke Energy Carolinas,157,27382506.259,0,14.311913562186774
+250,South Carolina Electric & Gas Company,2018,South Carolina Public Service Authority,251,27382506.259,0,1.5120377071822138
+250,South Carolina Electric & Gas Company,2018,"Southern Company Services, Inc. - Trans",253,27382506.259,0,7.470213150593904
+250,South Carolina Electric & Gas Company,2018,Southeastern Power Administration,338,27382506.259,0,809.60948359527
+238,PUD No. 1 of Douglas County,2018,Avista Corporation,119,4438938,0,0.47394010075583065
+238,PUD No. 1 of Douglas County,2018,Bonneville Power Administration,122,4438938,0,6.300550623967492
+238,PUD No. 1 of Douglas County,2018,Public Utility District No. 1 of Chelan County,237,4438938,0,0
+238,PUD No. 1 of Douglas County,2018,"Public Utility District No. 2 of Grant County, Washington",239,4438938,0,0
+238,PUD No. 1 of Douglas County,2018,PacifiCorp - West,229,4438938,0,1.0397518051488805
+238,PUD No. 1 of Douglas County,2018,Portland General Electric Company,232,4438938,0,3.2859692245773706
+238,PUD No. 1 of Douglas County,2018,Puget Sound Energy,240,4438938,0,3.305861800084799
+157,Duke Energy Carolinas,2018,Duke Energy Carolinas,157,121657470.092,0,14.311913562186774
+157,Duke Energy Carolinas,2018,"PJM Interconnection, LLC",230,121657470.092,0,1.8860649401436647
+157,Duke Energy Carolinas,2018,South Carolina Electric & Gas Company,250,121657470.092,0,47.53872725138729
+157,Duke Energy Carolinas,2018,South Carolina Public Service Authority,251,121657470.092,0,1.5120377071822138
+157,Duke Energy Carolinas,2018,Southeastern Power Administration,338,121657470.092,0,809.60948359527
+157,Duke Energy Carolinas,2018,"Southern Company Services, Inc. - Trans",253,121657470.092,0,7.470213150593904
+157,Duke Energy Carolinas,2018,Tennessee Valley Authority,263,121657470.092,0,4.789864489011681
+119,Avista Corporation,2018,Bonneville Power Administration,122,8004576.998,0.11678143141811369,6.300550623967492
+119,Avista Corporation,2018,Public Utility District No. 1 of Chelan County,237,8004576.998,0.0012298906518647369,0
+119,Avista Corporation,2018,PUD No. 1 of Douglas County,238,8004576.998,0,0
+119,Avista Corporation,2018,"Public Utility District No. 2 of Grant County, Washington",239,8004576.998,0.004347528096381405,0
+119,Avista Corporation,2018,Gridforce South,323,8004576.998,0.0004610270617067492,0.0037999999999999996
+119,Avista Corporation,2018,Idaho Power Company,180,8004576.998,0.0008732391955577066,14.149625554728045
+119,Avista Corporation,2018,NorthWestern Energy (NWMT),217,8004576.998,0.007680637189004076,35.40090885455338
+119,Avista Corporation,2018,PacifiCorp - West,229,8004576.998,0.003431194571202498,1.0397518051488805
+119,Avista Corporation,2018,Puget Sound Energy,240,8004576.998,0,3.305861800084799
+119,Avista Corporation,2018,Seattle City Light,247,8004576.998,0.0028936608362034846,1.741533667285393
+119,Avista Corporation,2018,"City of Tacoma, Department of Public Utilities, Light Division",139,8004576.998,0.0028936481800126996,11.466546329932077
+119,Avista Corporation,2018,Portland General Electric Company,232,8004576.998,0,3.2859692245773706
+194,Los Angeles Department of Water and Power,2018,Arizona Public Service Company,116,22065385.292,0.023535663395944054,2.0040115317198595
+194,Los Angeles Department of Water and Power,2018,Bonneville Power Administration,122,22065385.292,0.04885045998042692,6.300550623967492
+194,Los Angeles Department of Water and Power,2018,California Independent System Operator,125,22065385.292,0.003941643853037158,2.006518725988799
+194,Los Angeles Department of Water and Power,2018,Nevada Power Company,210,22065385.292,0.0148694014696083,1.0436487510347943
+194,Los Angeles Department of Water and Power,2018,PacifiCorp - East,228,22065385.292,0.0056139490498184315,2.2516158127472954
+194,Los Angeles Department of Water and Power,2018,Western Area Power Administration - Desert Southwest Region,272,22065385.292,0.037395261985730247,116.52028992053307
+228,PacifiCorp - East,2018,Arizona Public Service Company,116,59310290.848,7.65839271736892e-05,2.0040115317198595
+228,PacifiCorp - East,2018,Idaho Power Company,180,59310290.848,0.001049736280328831,14.149625554728045
+228,PacifiCorp - East,2018,Los Angeles Department of Water and Power,194,59310290.848,3.247746767914935e-05,1.0749511071495452
+228,PacifiCorp - East,2018,"NaturEner Power Watch, LLC (GWA)",324_1,59310290.848,0,0.0038
+228,PacifiCorp - East,2018,Nevada Power Company,210,59310290.848,6.710364635011519e-05,1.0436487510347943
+228,PacifiCorp - East,2018,NorthWestern Energy (NWMT),217,59310290.848,0.0012991343281889287,35.40090885455338
+228,PacifiCorp - East,2018,PacifiCorp - West,229,59310290.848,0.010253237939004933,1.0397518051488805
+228,PacifiCorp - East,2018,Salt River Project,244,59310290.848,0.0002007015651219382,5.97609318776568
+228,PacifiCorp - East,2018,Western Area Power Administration - Rocky Mountain Region,273,59310290.848,0.002281686814865996,2.026212246273502
+229,PacifiCorp - West,2018,Avista Corporation,119,10882397.711,0.0032681318646631957,0.47394010075583065
+229,PacifiCorp - West,2018,Bonneville Power Administration,122,10882397.711,0.0841648141613287,6.300550623967492
+229,PacifiCorp - West,2018,Public Utility District No. 1 of Chelan County,237,10882397.711,0,0
+229,PacifiCorp - West,2018,California Independent System Operator,125,10882397.711,7.141040135482163e-06,2.006518725988799
+229,PacifiCorp - West,2018,PUD No. 1 of Douglas County,238,10882397.711,0,0
+229,PacifiCorp - West,2018,"Public Utility District No. 2 of Grant County, Washington",239,10882397.711,0.011087378903875324,0
+229,PacifiCorp - West,2018,Gridforce South,323,10882397.711,0.006647045805996785,0.0037999999999999996
+229,PacifiCorp - West,2018,Idaho Power Company,180,10882397.711,0.02850542624435039,14.149625554728045
+229,PacifiCorp - West,2018,NorthWestern Energy (NWMT),217,10882397.711,1.010048109686303e-08,35.40090885455338
+229,PacifiCorp - West,2018,PacifiCorp - East,228,10882397.711,0,2.2516158127472954
+229,PacifiCorp - West,2018,Portland General Electric Company,232,10882397.711,9.79746666395714e-06,3.2859692245773706
+234,Duke Energy Florida Inc,2018,Florida Municipal Power Pool,170,42461793.841,0.07887927814612082,1.3588676825566617
+234,Duke Energy Florida Inc,2018,Florida Power & Light Company,171,42461793.841,0.06911247999079462,1.1321172649537152
+234,Duke Energy Florida Inc,2018,Gainesville Regional Utilities,172,42461793.841,0.0030427239493246833,1.2304862431181307
+234,Duke Energy Florida Inc,2018,"Southern Company Services, Inc. - Trans",253,42461793.841,0.014896250648044574,7.470213150593904
+234,Duke Energy Florida Inc,2018,City of Tallahassee,140,42461793.841,0.008620706141013068,0.7886579913550332
+234,Duke Energy Florida Inc,2018,Tampa Electric Company,262,42461793.841,0.03659444711167805,1.063299417686789
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,PowerSouth Energy Cooperative,101,694391880.902,0.00015234053251042575,0.9003562658549137
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,"Associated Electric Cooperative, Inc.",118,694391880.902,0.0035874096078608196,1.1889432716355663
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,"Electric Energy, Inc.",161,694391880.902,0.0005891027922230758,1.8467030937013373
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,197,694391880.902,0.001936241494929352,1.6929224321797205
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,"PJM Interconnection, LLC",230,694391880.902,0.018788268626439158,1.8860649401436647
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,"Southern Company Services, Inc. - Trans",253,694391880.902,0.0019684576329727457,7.470213150593904
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,Southwestern Power Administration,258,694391880.902,0.001003353941908871,3.1432513429544837
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,Southwest Power Pool,257,694391880.902,0.009019869201373007,4.96399025629377
+321,"Midcontinent Independent Transmission System Operator, Inc..",2018,Tennessee Valley Authority,263,694391880.902,0.003435292415889155,4.789864489011681
+258,Southwestern Power Administration,2018,"Associated Electric Cooperative, Inc.",118,7169460.999,0,1.1889432716355663
+258,Southwestern Power Administration,2018,Southwest Power Pool,257,7169460.999,0,4.96399025629377
+275,Western Area Power Administration UGP West,2018,NorthWestern Energy (NWMT),217,4542817,0.04128224098942914,35.40090885455338
+275,Western Area Power Administration UGP West,2018,Western Area Power Administration - Desert Southwest Region,272,4542817,0.001859652932491741,116.52028992053307
+275,Western Area Power Administration UGP West,2018,Southwest Power Pool,257,4542817,0.004120652969729232,4.96399025629377
+219,Ohio Valley Electric Corporation,2018,"PJM Interconnection, LLC",230,12170390,0,1.8860649401436647
+219,Ohio Valley Electric Corporation,2018,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,197,12170390,0,1.6929224321797205
+170,Florida Municipal Power Pool,2018,JEA,186,15190821,0,1.2319722054735114
+170,Florida Municipal Power Pool,2018,Duke Energy Florida Inc,234,15190821,0,0.8500088276060058
+170,Florida Municipal Power Pool,2018,Tampa Electric Company,262,15190821,0,1.063299417686789
+170,Florida Municipal Power Pool,2018,Florida Power & Light Company,171,15190821,0,1.1321172649537152
+262,Tampa Electric Company,2018,Duke Energy Florida Inc,234,24067165,0,0.8500088276060058
+262,Tampa Electric Company,2018,Florida Power & Light Company,171,24067165,0,1.1321172649537152
+262,Tampa Electric Company,2018,Florida Municipal Power Pool,170,24067165,0,1.3588676825566617
+262,Tampa Electric Company,2018,Seminole Electric Cooperative,248,24067165,0,0.9956109951202573
+125,California Independent System Operator,2018,Arizona Public Service Company,116,167338195.212,0.03995883554377718,2.0040115317198595
+125,California Independent System Operator,2018,Balancing Authority of Northern California,243,167338195.212,0.016942164179499848,4.111589067074509
+125,California Independent System Operator,2018,Bonneville Power Administration,122,167338195.212,0.06450334811213794,6.300550623967492
+125,California Independent System Operator,2018,Imperial Irrigation District,182,167338195.212,0.006437005239059852,2.149933056700461
+125,California Independent System Operator,2018,Los Angeles Department of Water and Power,194,167338195.212,0.09015392707403279,1.0749511071495452
+125,California Independent System Operator,2018,Nevada Power Company,210,167338195.212,6.838360297450365e-05,1.0436487510347943
+125,California Independent System Operator,2018,PacifiCorp - West,229,167338195.212,0.000874780326528273,1.0397518051488805
+125,California Independent System Operator,2018,Nevada Power Company,210,167338195.212,0,1.0436487510347943
+125,California Independent System Operator,2018,Salt River Project,244,167338195.212,0.047784156153020244,5.97609318776568
+125,California Independent System Operator,2018,Turlock Irrigation District,267,167338195.212,0.0003039215002170575,90.22952663207539
+125,California Independent System Operator,2018,Western Area Power Administration - Rocky Mountain Region,273,167338195.212,0.002819684739599144,2.026212246273502
+235,Public Service Company of Colorado,2018,Western Area Power Administration - Rocky Mountain Region,273,29680090.382,0.09724382083376278,2.026212246273502
+235,Public Service Company of Colorado,2018,Public Service Company of New Mexico,236,29680090.382,0,1.8562746718748229
+235,Public Service Company of Colorado,2018,Southwest Power Pool,257,29680090.382,0,4.96399025629377
+172,Gainesville Regional Utilities,2018,Duke Energy Florida Inc,234,2003571.999,0.04152494811258828,0.8500088276060058
+172,Gainesville Regional Utilities,2018,Florida Power & Light Company,171,2003571.999,0.1231243298320472,1.1321172649537152
+253,"Southern Company Services, Inc. - Trans",2018,PowerSouth Energy Cooperative,101,254970399.497,0,0.9003562658549137
+253,"Southern Company Services, Inc. - Trans",2018,Duke Energy Carolinas,157,254970399.497,0,14.311913562186774
+253,"Southern Company Services, Inc. - Trans",2018,"Midcontinent Independent Transmission System Operator, Inc..",321,254970399.497,0,5.099090482862521
+253,"Southern Company Services, Inc. - Trans",2018,Florida Power & Light Company,171,254970399.497,0,1.1321172649537152
+253,"Southern Company Services, Inc. - Trans",2018,Florida Power & Light Company,171,254970399.497,0,1.1321172649537152
+253,"Southern Company Services, Inc. - Trans",2018,JEA,186,254970399.497,0,1.2319722054735114
+253,"Southern Company Services, Inc. - Trans",2018,South Carolina Electric & Gas Company,250,254970399.497,0,47.53872725138729
+253,"Southern Company Services, Inc. - Trans",2018,Southeastern Power Administration,338,254970399.497,0,809.60948359527
+253,"Southern Company Services, Inc. - Trans",2018,Southeastern Power Administration,338,254970399.497,0,809.60948359527
+253,"Southern Company Services, Inc. - Trans",2018,Southeastern Power Administration,338,254970399.497,0,809.60948359527
+253,"Southern Company Services, Inc. - Trans",2018,City of Tallahassee,140,254970399.497,0,0.7886579913550332
+253,"Southern Company Services, Inc. - Trans",2018,Tennessee Valley Authority,263,254970399.497,0,4.789864489011681
+240,Puget Sound Energy,2018,Avista Corporation,119,7041041.002,0,0.47394010075583065
+240,Puget Sound Energy,2018,Bonneville Power Administration,122,7041041.002,0.48040699859495506,6.300550623967492
+240,Puget Sound Energy,2018,Public Utility District No. 1 of Chelan County,237,7041041.002,0.04005166220356956,0
+240,Puget Sound Energy,2018,PUD No. 1 of Douglas County,238,7041041.002,0,0
+240,Puget Sound Energy,2018,"Public Utility District No. 2 of Grant County, Washington",239,7041041.002,0,0
+240,Puget Sound Energy,2018,NorthWestern Energy (NWMT),217,7041041.002,0.0026010346737561025,35.40090885455338
+240,Puget Sound Energy,2018,PacifiCorp - East,228,7041041.002,0,2.2516158127472954
+240,Puget Sound Energy,2018,Portland General Electric Company,232,7041041.002,0,3.2859692245773706
+240,Puget Sound Energy,2018,Seattle City Light,247,7041041.002,0.032793992305539726,1.741533667285393
+240,Puget Sound Energy,2018,"City of Tacoma, Department of Public Utilities, Light Division",139,7041041.002,0.007822967762344346,11.466546329932077
+185,ISO New England Inc.,2018,New Brunswick System Operator,NBSO,104373730.603,0.03730017200607314,1.6604299402959934
+,"Alcoa Power Generating, Inc. - Yadkin Division",2018,"Alcoa Power Generating, Inc. - Yadkin Division",,,1,
+,Anchorage Municipal Light & Power,2018,Anchorage Municipal Light & Power,,,1,
+,Arizona Public Service Company,2018,Arizona Public Service Company,,,1,
+,"Arlington Valley, LLC - AVBA",2018,"Arlington Valley, LLC - AVBA",,,1,
+,"Associated Electric Cooperative, Inc.",2018,"Associated Electric Cooperative, Inc.",,,1,
+,Avangrid Renewables LLC,2018,Avangrid Renewables LLC,,,1,
+,Avista Corporation,2018,Avista Corporation,,,0.8594077427999529,
+,Balancing Authority of Northern California,2018,Balancing Authority of Northern California,,,0.6428519756857548,
+,BC Hydro & Power Authority                        ,2018,BC Hydro & Power Authority                        ,,,1,
+,Bonneville Power Administration,2018,Bonneville Power Administration,,,1,
+,California Independent System Operator,2018,California Independent System Operator,,,0.7301537935291531,
+,Chugach Electric Assn Inc,2018,Chugach Electric Assn Inc,,,1,
+,City of Homestead,2018,City of Homestead,,,-0.001451834096700244,
+,"City of Tacoma, Department of Public Utilities, Light Division",2018,"City of Tacoma, Department of Public Utilities, Light Division",,,0.5554691964022788,
+,City of Tallahassee,2018,City of Tallahassee,,,1,
+,"Constellation Energy Control and Dispatch, LLC",2018,"Constellation Energy Control and Dispatch, LLC",,,1,
+,Duke Energy Carolinas,2018,Duke Energy Carolinas,,,1,
+,Duke Energy Florida Inc,2018,Duke Energy Florida Inc,,,0.7888541140130242,
+,Duke Energy Progress East,2018,Duke Energy Progress East,,,1,
+,Duke Energy Progress West,2018,Duke Energy Progress West,,,0.001241340241918798,
+,El Paso Electric Company,2018,El Paso Electric Company,,,0.6255828853074243,
+,"Electric Energy, Inc.",2018,"Electric Energy, Inc.",,,1,
+,"Electric Reliability Council of Texas, Inc.",2018,"Electric Reliability Council of Texas, Inc.",,,1,
+,Florida Municipal Power Pool,2018,Florida Municipal Power Pool,,,1,
+,Florida Power & Light Company,2018,Florida Power & Light Company,,,1,
+,Gainesville Regional Utilities,2018,Gainesville Regional Utilities,,,0.8353507220553645,
+,"Gila River Power, LLC",2018,"Gila River Power, LLC",,,1,
+,Gridforce South,2018,Gridforce South,,,1,
+,"Griffith Energy, LLC",2018,"Griffith Energy, LLC",,,1,
+,Hawaiian Electric Co Inc,2018,Hawaiian Electric Co Inc,,,1,
+,Idaho Power Company,2018,Idaho Power Company,,,0.8498122474542553,
+,Imperial Irrigation District,2018,Imperial Irrigation District,,,1,
+,ISO New England Inc.,2018,ISO New England Inc.,,,0.9626998279939268,
+,JEA,2018,JEA,,,0.7982043942983904,
+,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,2018,LG&E and KU Services Company as agent for Louisville Gas and Electric Company and Kentucky Utilities,,,1,
+,Los Angeles Department of Water and Power,2018,Los Angeles Department of Water and Power,,,0.8657936202654348,
+,"Midcontinent Independent Transmission System Operator, Inc..",2018,"Midcontinent Independent Transmission System Operator, Inc..",,,0.9595196637538934,
+,"NaturEner Power Watch, LLC (GWA)",2018,"NaturEner Power Watch, LLC (GWA)",,,1,
+,"NaturEner Wind Watch, LLC",2018,"NaturEner Wind Watch, LLC",,,1,
+,Nevada Power Company,2018,Nevada Power Company,,,0.8170399282620358,
+,New Brunswick System Operator,2018,New Brunswick System Operator,,,1,
+,"New Harquahala Generating Company, LLC - HGBA",2018,"New Harquahala Generating Company, LLC - HGBA",,,1,
+,"New Smyrna Beach, Utilities Commission of",2018,"New Smyrna Beach, Utilities Commission of",,,1,
+,New York Independent System Operator,2018,New York Independent System Operator,,,1,
+,No balancing authority,2018,No balancing authority,,,1,
+,NorthWestern Energy (NWMT),2018,NorthWestern Energy (NWMT),,,0.9202152440694414,
+,Ohio Valley Electric Corporation,2018,Ohio Valley Electric Corporation,,,1,
+,PacifiCorp - East,2018,PacifiCorp - East,,,0.9847393380312864,
+,PacifiCorp - West,2018,PacifiCorp - West,,,0.8663102544125051,
+,"PJM Interconnection, LLC",2018,"PJM Interconnection, LLC",,,1,
+,Portland General Electric Company,2018,Portland General Electric Company,,,0.7468829650766324,
+,PowerSouth Energy Cooperative,2018,PowerSouth Energy Cooperative,,,1,
+,Public Service Company of Colorado,2018,Public Service Company of Colorado,,,0.9027561791662372,
+,Public Service Company of New Mexico,2018,Public Service Company of New Mexico,,,0.9525505828423813,
+,Public Utility District No. 1 of Chelan County,2018,Public Utility District No. 1 of Chelan County,,,1,
+,"Public Utility District No. 2 of Grant County, Washington",2018,"Public Utility District No. 2 of Grant County, Washington",,,1,
+,PUD No. 1 of Douglas County,2018,PUD No. 1 of Douglas County,,,1,
+,Puget Sound Energy,2018,Puget Sound Energy,,,0.4363233444598352,
+,Salt River Project,2018,Salt River Project,,,1,
+,Seattle City Light,2018,Seattle City Light,,,0.6906666068338267,
+,Seminole Electric Cooperative,2018,Seminole Electric Cooperative,,,1,
+,South Carolina Electric & Gas Company,2018,South Carolina Electric & Gas Company,,,1,
+,South Carolina Public Service Authority,2018,South Carolina Public Service Authority,,,0.7086461732705505,
+,Southeastern Power Administration,2018,Southeastern Power Administration,,,1,
+,"Southern Company Services, Inc. - Trans",2018,"Southern Company Services, Inc. - Trans",,,1,
+,Southwest Power Pool,2018,Southwest Power Pool,,,1,
+,Southwestern Power Administration,2018,Southwestern Power Administration,,,1,
+,Tampa Electric Company,2018,Tampa Electric Company,,,1,
+,Tennessee Valley Authority,2018,Tennessee Valley Authority,,,0.982661363823969,
+,Tucson Electric Power Company,2018,Tucson Electric Power Company,,,0.8792251575105461,
+,Turlock Irrigation District,2018,Turlock Irrigation District,,,0.6404831781334623,
+,Western Area Power Administration - Desert Southwest Region,2018,Western Area Power Administration - Desert Southwest Region,,,0.8926018212161477,
+,Western Area Power Administration - Rocky Mountain Region,2018,Western Area Power Administration - Rocky Mountain Region,,,1,
+,Western Area Power Administration UGP West,2018,Western Area Power Administration UGP West,,,0.9527374531083499,
