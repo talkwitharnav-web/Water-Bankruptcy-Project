@@ -13,15 +13,16 @@ DATA_FILE = BASE_DIR / "USA - GGMN" / "monitoring"
 # Defining where the clean dataset should be saved
 CLEAN_DATASET_DIR = BASE_DIR / "Clean Datasets" / "USA - GGMN - CLEANED" / "monitoring"
 # This makes a list for tqdm so it can knows how many files there are and accordingly make a progress bar
-all_files = list(DATA_FILE.glob("*.ods"))
-""" We loop through all the files one at a time, with filepath holding the path of the file. The tqdm part is a wrapper so it can use our list and update progress, giving
+all_files = list(DATA_FILE.glob("*.ods")) # Credit to Gemini for this line of code
+""" We loop through all the files one at a time, with filepath holding the path of the file. The tqdm part is a wrapper so
+    it can use our list and update progress, giving
     stats like how many files are left, how much time is remaining, and the speed of processing.
     Also unit="file" just tells tqdm that instead of displaying rate of progress as "it/s" (iterations per second)
     it should display as "file/s" so it's just more readable.
 """
 for filepath in tqdm(all_files, unit="file"): # Credit to Gemini for the tqdm part of this line
     # try catch block for safety
-    try:
+    try: # Credit to Gemini for the df declaration
         df = pd.read_excel(filepath,
                            engine = "odf" # ods isn't typically readable by pandas so specifying engine is necessary
                            , header= None # no headers in these files

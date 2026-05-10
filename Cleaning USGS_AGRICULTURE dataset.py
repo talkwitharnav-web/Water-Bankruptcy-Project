@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 # Finding working directory!
-# .parent arguement makes it so it finds the folder in which this py file is in (our working directory) instead of just this file.
+# .parent argument makes it so it finds the folder in which this py file is in (our working directory) instead of just this file.
 BASE_DIR = Path(__file__).parent
 # Defining where the dataset is
 DATA_FILE = BASE_DIR / "Raw Datasets" / "USGS_AGRICULTURE_DATASET.csv"
@@ -9,6 +9,7 @@ DATA_FILE = BASE_DIR / "Raw Datasets" / "USGS_AGRICULTURE_DATASET.csv"
 CLEANED_DATA_DIR = BASE_DIR / "Clean Datasets"
 # Reading in dataset
 df = pd.read_csv(DATA_FILE)
+print(df.head())
 # Keeping columns that are needed for analysis
 columns_to_keep = ["STATE",
                    "COUNTY",
