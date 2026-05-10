@@ -1,0 +1,61 @@
+table 'Input data Table 1'
+	lineageTag: 2e6270a5-a60d-44ce-a19e-ddc77f177a05
+
+	column 'PCA Name'
+		dataType: string
+		lineageTag: 24276099-2430-42ce-a639-650ee79ecdc7
+		summarizeBy: none
+		sourceColumn: PCA Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Internal Data Centers'
+		dataType: string
+		lineageTag: 077eb8de-aa45-45ec-94ca-60465afa5db3
+		summarizeBy: none
+		sourceColumn: Internal Data Centers
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Colocation data center'
+		dataType: string
+		lineageTag: 3c6041c2-c961-4a94-9878-9acf02e1ab2e
+		summarizeBy: none
+		sourceColumn: Colocation data center
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Hyperscale data center'
+		dataType: string
+		lineageTag: ebed591a-2494-4f8a-afb8-608d5482b742
+		summarizeBy: none
+		sourceColumn: Hyperscale data center
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total
+		dataType: string
+		lineageTag: 17957d28-c0ac-499d-b51e-939e5f69cf18
+		summarizeBy: none
+		sourceColumn: Total
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Input data Table 1' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Input data Table 1.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Top Rows",{{"Column1", "PCA Name"}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Renamed Columns", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"", type text}, {"Internal Data Centers", type text}, {"Colocation data center", type text}, {"Hyperscale data center", type text}, {"Total", type text}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type1",{{"", "PCA Name"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

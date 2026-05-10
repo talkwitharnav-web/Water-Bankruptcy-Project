@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "3da7a34ef17f0fe37698",
+  "displayName": "Water Consumption by method of Energy Generation 2024",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

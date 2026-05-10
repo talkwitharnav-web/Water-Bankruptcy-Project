@@ -1,0 +1,57 @@
+table 'Input data Table 5'
+	lineageTag: ab067939-6d86-4f07-9eb8-484ff178c1f2
+
+	column 'HUC8 ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: b8418a3e-f396-4d82-a0b5-14b27dff85ac
+		summarizeBy: none
+		sourceColumn: HUC8 ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subbasin
+		dataType: string
+		lineageTag: 0f98a0e7-41bd-4bbc-ae15-d0a8fd88a111
+		summarizeBy: none
+		sourceColumn: Subbasin
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scaled Power Consumption (MWh)'
+		dataType: double
+		lineageTag: 7b083273-e30c-41e1-b22c-3bc4250f1972
+		summarizeBy: sum
+		sourceColumn: Scaled Power Consumption (MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Characterization factor'
+		dataType: double
+		lineageTag: efb3bb86-873e-4ae0-afac-bd643aa7f5cb
+		summarizeBy: sum
+		sourceColumn: Characterization factor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Input data Table 5' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Input data Table 5.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"HUC8 ID", Int64.Type}, {"Subbasin", type text}, {"Scaled Power Consumption (MWh)", type number}, {"Characterization factor", type number}}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type1", {"HUC8 ID"})
+				in
+				    #"Removed Errors"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

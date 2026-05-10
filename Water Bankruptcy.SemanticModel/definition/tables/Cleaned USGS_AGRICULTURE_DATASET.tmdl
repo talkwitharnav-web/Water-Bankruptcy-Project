@@ -1,0 +1,189 @@
+table 'Cleaned USGS_AGRICULTURE_DATASET'
+	lineageTag: 83c51d70-09ec-49d7-8e22-b36eb98105cb
+
+	column STATE
+		dataType: string
+		lineageTag: 2a154d16-477a-43fc-8c22-91c4e4d8be23
+		summarizeBy: none
+		sourceColumn: STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTY
+		dataType: string
+		lineageTag: e24845f3-ae52-43d0-9bb7-442bf961e76a
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: COUNTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d54da4e-2638-484c-aa36-a0743cd75cab
+		summarizeBy: sum
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column Public_Supply_GW
+		dataType: double
+		lineageTag: 63fa3119-2175-407b-8e97-17fefd72ede5
+		summarizeBy: sum
+		sourceColumn: Public_Supply_GW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Public_Supply_SW
+		dataType: double
+		lineageTag: 81cbe692-4ab1-46bf-86fb-595af30a7098
+		summarizeBy: sum
+		sourceColumn: Public_Supply_SW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Public_Supply
+		dataType: double
+		lineageTag: dfeebe03-d6a6-4758-9137-cd480a4169f5
+		summarizeBy: sum
+		sourceColumn: Public_Supply
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Industrial_GW
+		dataType: double
+		lineageTag: a547954e-9c70-4533-a237-a2cc3bd95d62
+		summarizeBy: sum
+		sourceColumn: Industrial_GW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Industrial_SW
+		dataType: double
+		lineageTag: fd701dd6-4ed7-4774-879a-0e1ad48cb579
+		summarizeBy: sum
+		sourceColumn: Industrial_SW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Industrial
+		dataType: double
+		lineageTag: fe654892-bb6f-4774-8e46-56e42f0767b6
+		summarizeBy: sum
+		sourceColumn: Industrial
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Irrigation_GW
+		dataType: double
+		lineageTag: 216e9dc7-fb55-4743-a16c-ef68f5b1ef5e
+		summarizeBy: sum
+		sourceColumn: Irrigation_GW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Irrigation_SW
+		dataType: double
+		lineageTag: 6b1a9cc0-bad5-4fcd-8a8e-1c5879fd90b5
+		summarizeBy: sum
+		sourceColumn: Irrigation_SW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Irrigation
+		dataType: double
+		lineageTag: fa23c2ed-c266-4ebb-b45a-2c41550870cb
+		summarizeBy: sum
+		sourceColumn: Irrigation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column County_Standardized
+		dataType: string
+		lineageTag: f55e7a5c-aa7e-4b45-9ec7-63c2f320c533
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: County_Standardized
+
+		annotation SummarizationSetBy = Automatic
+
+	column Water_Source = IF([Industrial_GW] > [Industrial_SW], "Groundwater-Dominant", "Surface Water-Dominant")
+		lineageTag: a6a1eb76-3c84-4380-8707-834e7ccd78ee
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unique_County = [COUNTY] & ", " & [State]
+		lineageTag: 3aeedb2b-27f4-4f35-a47b-c01312395352
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column PCT_GW_Reliance_Irrigation = ROUND(DIVIDE([Irrigation_GW], [Irrigation_GW] + [Irrigation_SW], 0) * 100, 2)
+		lineageTag: ae25e84b-3e82-4572-9266-ceaf92db1594
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PCT_GW_Reliance_Industrial = ROUND(DIVIDE([Industrial_GW], [Industrial_GW] + [Industrial_SW], 0) * 100, 2)
+		lineageTag: 6af23fd2-9845-4823-aded-6a195482c003
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PCT_GW_Reliance_Public_Supply = ROUND(DIVIDE([Public_Supply_GW], [Public_Supply_GW] + [Public_Supply_SW], 0) * 100, 2)
+		lineageTag: 9ab7bb18-9f7b-4ba4-aa54-120bfc93e399
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Triple_Risk_Score = DIVIDE([PCT_GW_Reliance_Irrigation] +[PCT_GW_Reliance_Industrial] + [PCT_GW_Reliance_Public_Supply],3,0 )
+		formatString: 0.00
+		lineageTag: 414ded74-aa2b-4dab-8073-092c3424a59a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Accurate_County = 'Cleaned USGS_AGRICULTURE_DATASET'[COUNTY] & ", " & 'Cleaned USGS_AGRICULTURE_DATASET'[STATE]
+		lineageTag: d710af69-1a69-409a-961c-7ff97cbfffe0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Cleaned USGS_AGRICULTURE_DATASET' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\Cleaned USGS_AGRICULTURE_DATASET.csv"),[Delimiter=",", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"STATE", type text}, {"COUNTY", type text}, {"YEAR", Int64.Type}, {"Public_Supply_GW", type number}, {"Public_Supply_SW", type number}, {"Public_Supply", type number}, {"Industrial_GW", type number}, {"Industrial_SW", type number}, {"Industrial", type number}, {"Irrigation_GW", type number}, {"Irrigation_SW", type number}, {"Irrigation", type number}, {"County_Standardized", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

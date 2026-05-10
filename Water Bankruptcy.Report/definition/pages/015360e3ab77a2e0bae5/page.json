@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "015360e3ab77a2e0bae5",
+  "displayName": "Drought Intensity (per State) 2019-2026",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "52a5636b151d8d634903",
+    "type": "Default",
+    "parameters": []
+  }
+}

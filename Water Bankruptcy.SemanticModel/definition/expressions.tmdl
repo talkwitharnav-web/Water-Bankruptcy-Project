@@ -1,0 +1,28 @@
+expression 'Results Table 3' =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Results Table 3.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+		    #"Removed Top Rows" = Table.Skip(#"Changed Type",1),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"HUC8", Int64.Type}, {"WSF_1MW_DC", type number}, {"WF_1MW_DC", type number}, {"CF_1MW_DC", type number}})
+		in
+		    #"Changed Type1"
+	lineageTag: e4a0038f-c6de-4ce1-baf2-3bf0285c30da
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Table =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Ncy5DcAwDACxXVSn0CmPnVkM7b9GgMDXseJaUZkZffxAlDjFJW7xiCGmeDdwxhlnnHHGGWeccca59hzdHw==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}}),
+		    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+		in
+		    #"Removed Columns"
+	lineageTag: 9a3475a8-9b9b-43b3-920b-ee1e778e9b67
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

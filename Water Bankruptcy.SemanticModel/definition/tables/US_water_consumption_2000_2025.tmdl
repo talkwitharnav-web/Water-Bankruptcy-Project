@@ -1,0 +1,122 @@
+table US_water_consumption_2000_2025
+	lineageTag: b13194f2-81e2-42d1-bd7a-eae0dcbcc779
+
+	column Country
+		dataType: string
+		lineageTag: 26073060-eb11-4e9b-81f2-d678adeff78f
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: a19d8f26-7a7e-4d64-a75f-6350f71ca00c
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Water Consumption (Billion m3)'
+		dataType: double
+		lineageTag: 748c471e-ad91-4174-8937-1c7783f50b71
+		summarizeBy: sum
+		sourceColumn: Total Water Consumption (Billion m3)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Per Capita Water Use (L/Day)'
+		dataType: double
+		lineageTag: 4fecde27-dd55-4c21-902e-18e1b01413fd
+		summarizeBy: sum
+		sourceColumn: Per Capita Water Use (L/Day)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Agricultural Water Use (%)'
+		dataType: double
+		lineageTag: addab542-f10c-4eaa-ad64-a7049da8ffb4
+		summarizeBy: sum
+		sourceColumn: Agricultural Water Use (%)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Industrial Water Use (%)'
+		dataType: double
+		lineageTag: d1296d1d-49a2-4a36-a4a6-90b825ebd5ca
+		summarizeBy: sum
+		sourceColumn: Industrial Water Use (%)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Household Water Use (%)'
+		dataType: double
+		lineageTag: 91765d49-b019-4b49-b846-a16838794485
+		summarizeBy: sum
+		sourceColumn: Household Water Use (%)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Rainfall Impact (mm)'
+		dataType: double
+		lineageTag: cc0a3c41-28d4-498a-9092-2884ca29a882
+		summarizeBy: sum
+		sourceColumn: Rainfall Impact (mm)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Groundwater Depletion Rate (%)'
+		dataType: double
+		lineageTag: 3f91477e-a94a-4d8e-96cb-cf2f7576b0c6
+		summarizeBy: sum
+		sourceColumn: Groundwater Depletion Rate (%)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Water Scarcity Level'
+		dataType: string
+		lineageTag: cccf7a5b-4f35-474c-bffd-8cafd76039cd
+		summarizeBy: none
+		sourceColumn: Water Scarcity Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_for_forecasting = DATE([Year],1,1 )
+		formatString: Short Date
+		lineageTag: 4d4a1a37-b7f7-4adc-b170-4a53818bcb7d
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 2c8b3f94-86fb-46d5-9daa-30b108b10190
+			defaultHierarchy: LocalDateTable_71512004-34ab-42a9-96b8-456ab633bdf0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition US_water_consumption_2000_2025 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\US_water_consumption_2000_2025.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Country", type text}, {"Year", Int64.Type}, {"Total Water Consumption (Billion m3)", type number}, {"Per Capita Water Use (L/Day)", type number}, {"Agricultural Water Use (%)", type number}, {"Industrial Water Use (%)", type number}, {"Household Water Use (%)", type number}, {"Rainfall Impact (mm)", type number}, {"Groundwater Depletion Rate (%)", type number}, {"Water Scarcity Level", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

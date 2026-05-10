@@ -1,0 +1,60 @@
+relationship AutoDetected_31a9d00c-614e-4afd-9209-01967c493b57
+	fromColumn: 'Input data Table 2'.'HUC8 ID'
+	toColumn: 'Input data Table 5'.'HUC8 ID'
+
+relationship AutoDetected_92cc4d3b-dca1-44c4-9628-0b3e5fbec71e
+	fromColumn: 'Input data Table 4'.'HUC8 ID'
+	toColumn: 'Input data Table 5'.'HUC8 ID'
+
+relationship AutoDetected_3638e4e8-dfb8-4d82-8af3-a4d20e7ab3d9
+	fromColumn: 'Results Table 3 (2)'.HUC8
+	toColumn: 'Input data Table 5'.'HUC8 ID'
+
+relationship AutoDetected_c1cc61a8-4ce5-4553-abb4-7fd2b2cddb6f
+	fromColumn: 'Results TOC'.Column1
+	toColumn: 'Input data TOC'.Column1
+
+relationship AutoDetected_67e011e6-c4e8-4240-9152-2eda7b953ddf
+	fromColumn: 'Cleaned USGS_AGRICULTURE_DATASET'.STATE
+	toColumn: 'Input data Table 6'.State
+
+relationship AutoDetected_b106058d-d60a-475b-808f-6b862185cf09
+	fromColumn: 'Cleaned Cooler_Boiler_Generator_Data_Summary_2024'.State
+	toColumn: 'Input data Table 6'.State
+
+relationship 45344d73-0f82-4c68-a323-3df9df2a3bd1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Cleaned US Drought Monitor dataset'.ValidStart
+	toColumn: LocalDateTable_55c94909-5bc3-40e2-a76a-9d19a7e2de86.Date
+
+relationship 7c700554-e9b6-4d4e-a90d-ad8ec17f782f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Cleaned US Drought Monitor dataset'.ValidEnd
+	toColumn: LocalDateTable_47fca3bf-4ade-43d4-9177-3072a6770bfe.Date
+
+relationship AutoDetected_51e39454-ba0c-4358-a611-ca2800a55f07
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: US_water_consumption_2000_2025.Year
+	toColumn: YearTable.Year
+
+relationship AutoDetected_745f5283-71c2-4b18-9868-b1418bcdf892
+	isActive: false
+	fromColumn: 'Cleaned USGS_AGRICULTURE_DATASET'.YEAR
+	toColumn: YearTable.Year
+
+relationship AutoDetected_01a032e0-e4f9-48ff-9cd7-7509ecb296ad
+	fromColumn: 'Cleaned Cooler_Boiler_Generator_Data_Summary_2024'.Year
+	toColumn: YearTable.Year
+
+relationship 9c4429d1-40ac-1759-e77c-fdcd4b6284e5
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: cleaned_data_center_atlas.Unique_County
+	toColumn: 'Cleaned USGS_AGRICULTURE_DATASET'.Unique_County
+
+relationship 2c8b3f94-86fb-46d5-9daa-30b108b10190
+	joinOnDateBehavior: datePartOnly
+	fromColumn: US_water_consumption_2000_2025.Date_for_forecasting
+	toColumn: LocalDateTable_71512004-34ab-42a9-96b8-456ab633bdf0.Date
+

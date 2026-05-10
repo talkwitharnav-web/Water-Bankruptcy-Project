@@ -1,0 +1,139 @@
+table 'Cleaned US Drought Monitor dataset'
+	lineageTag: 9e9b5e1b-8ebe-4614-bff8-d8c2ed1a28ee
+
+	column MapDate
+		dataType: int64
+		formatString: 0
+		lineageTag: 4da9e6e2-68c5-41a2-a876-fda775833a56
+		summarizeBy: sum
+		sourceColumn: MapDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 935489ee-1162-447b-a136-2334107447d1
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column None
+		dataType: double
+		lineageTag: bc61c82e-32b5-43d9-8b46-378c1910cc69
+		summarizeBy: sum
+		sourceColumn: None
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column D0
+		dataType: double
+		lineageTag: d26406ef-2037-4205-8f03-1f9c680e65f8
+		summarizeBy: sum
+		sourceColumn: D0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column D1
+		dataType: double
+		lineageTag: 3a528b80-c722-41b2-9c4b-22b5a63d2429
+		summarizeBy: sum
+		sourceColumn: D1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column D2
+		dataType: double
+		lineageTag: 7dbab739-34f6-4872-973f-6dafb27f241e
+		summarizeBy: sum
+		sourceColumn: D2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column D3
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f564a8f-75ba-4261-8b01-7729efc32f1d
+		summarizeBy: sum
+		sourceColumn: D3
+
+		annotation SummarizationSetBy = Automatic
+
+	column D4
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f29f9ee-ad1e-48bc-91e8-811d2fd052a1
+		summarizeBy: sum
+		sourceColumn: D4
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValidStart
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7e2e91fc-f381-4443-9075-d0ea563e9575
+		summarizeBy: none
+		sourceColumn: ValidStart
+
+		variation Variation
+			isDefault
+			relationship: 45344d73-0f82-4c68-a323-3df9df2a3bd1
+			defaultHierarchy: LocalDateTable_55c94909-5bc3-40e2-a76a-9d19a7e2de86.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ValidEnd
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2c1138d7-f71b-416d-a0a7-214c097c0473
+		summarizeBy: none
+		sourceColumn: ValidEnd
+
+		variation Variation
+			isDefault
+			relationship: 7c700554-e9b6-4d4e-a90d-ad8ec17f782f
+			defaultHierarchy: LocalDateTable_47fca3bf-4ade-43d4-9177-3072a6770bfe.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StatisticFormatID
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a0681f3-efff-4fe2-a778-fbe638856e42
+		summarizeBy: count
+		sourceColumn: StatisticFormatID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = YEAR([ValidStart])
+		formatString: 0
+		lineageTag: ae1a39f1-a7c3-45f8-a2dd-d5e42b1c41fd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Cleaned US Drought Monitor dataset' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\Cleaned US Drought Monitor dataset.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"MapDate", Int64.Type}, {"State", type text}, {"None", type number}, {"D0", type number}, {"D1", type number}, {"D2", type number}, {"D3", Int64.Type}, {"D4", Int64.Type}, {"ValidStart", type date}, {"ValidEnd", type date}, {"StatisticFormatID", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,143 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "4977adb9589b8d22ca48",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 720,
+    "width": 783,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+                    }
+                  },
+                  "Property": "Generator Primary Technology"
+                }
+              },
+              "queryRef": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024.Generator Primary Technology",
+              "nativeQueryRef": "Generator Primary Technology"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+                    }
+                  },
+                  "Property": "Water Consumption Intensity Rate (Gallons / MWh)"
+                }
+              },
+              "queryRef": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024.Water Consumption Intensity Rate (Gallons / MWh)",
+              "nativeQueryRef": "Water Consumption Intensity Rate (Gallons / MWh)",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+                    }
+                  },
+                  "Property": "Net Generation from Steam Turbines (MWh)"
+                }
+              },
+              "queryRef": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024.Net Generation from Steam Turbines (MWh)",
+              "nativeQueryRef": "Net Generation from Steam Turbines (MWh)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Net Generation from Steam Turbines (MWh)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5bacfe8213449206ebb2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+              }
+            },
+            "Property": "Generator Primary Technology"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9081ba372c9b18a6ff20",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+              }
+            },
+            "Property": "Water Consumption Intensity Rate (Gallons / MWh)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "531011c51d70889d46e1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+              }
+            },
+            "Property": "Net Generation from Steam Turbines (MWh)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

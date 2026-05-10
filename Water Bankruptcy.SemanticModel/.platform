@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Water Bankruptcy"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d02e5ea0-389f-4fd7-9cfa-5cd6126ebb83"
+  }
+}

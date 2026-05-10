@@ -1,0 +1,59 @@
+table 'Results Table 3 (2)'
+	lineageTag: 9fbbbb7f-b4dc-4c44-aedf-fc1984c18571
+
+	column HUC8
+		dataType: int64
+		formatString: 0
+		lineageTag: 27af2336-412e-4a59-9888-b5c3b932b107
+		summarizeBy: none
+		sourceColumn: HUC8
+
+		annotation SummarizationSetBy = Automatic
+
+	column WSF_1MW_DC
+		dataType: double
+		lineageTag: 26bd55ef-e84f-444e-86c7-4ce26aa673e6
+		summarizeBy: sum
+		sourceColumn: WSF_1MW_DC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WF_1MW_DC
+		dataType: double
+		lineageTag: ef6bef1f-dfb9-4c17-9001-cc8cb13c2937
+		summarizeBy: sum
+		sourceColumn: WF_1MW_DC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CF_1MW_DC
+		dataType: double
+		lineageTag: 483ae5c0-e2d8-4efd-8eb1-9bbdd5b8e831
+		summarizeBy: sum
+		sourceColumn: CF_1MW_DC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Results Table 3 (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Results Table 3.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",1),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"HUC8", Int64.Type}, {"WSF_1MW_DC", type number}, {"WF_1MW_DC", type number}, {"CF_1MW_DC", type number}}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type1", {"HUC8"})
+				in
+				    #"Removed Errors"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,64 @@
+table 'Input data Table 4'
+	lineageTag: 72e43933-6af8-45cb-bc34-967acc257662
+
+	column Subbasin
+		dataType: string
+		lineageTag: 41f19300-6f62-4fa9-92a2-e850ccc054ec
+		summarizeBy: none
+		sourceColumn: Subbasin
+
+		annotation SummarizationSetBy = Automatic
+
+	column HUC8
+		dataType: int64
+		formatString: 0
+		lineageTag: 509c5de3-3e48-4a68-b4c4-8020049d9d94
+		summarizeBy: sum
+		sourceColumn: HUC8
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Subbasin Area (m2)'
+		dataType: double
+		lineageTag: 90b63269-32c5-4031-9ebd-a7cd1ab4b8ac
+		summarizeBy: sum
+		sourceColumn: Subbasin Area (m2)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'HUC8 ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ce3264f-ddfe-4192-b357-651774a3d846
+		summarizeBy: none
+		sourceColumn: HUC8 ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PCA Name'
+		dataType: string
+		lineageTag: d3d1e9b0-9e25-45e4-a9ec-858d46eab60e
+		summarizeBy: none
+		sourceColumn: PCA Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Input data Table 4' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Input data Table 4.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Subbasin", type text}, {"HUC8", Int64.Type}, {"Subbasin Area (m2)", type number}, {"HUC8 ID", Int64.Type}, {"PCA Name", type text}}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type1", {"Subbasin"})
+				in
+				    #"Removed Errors"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

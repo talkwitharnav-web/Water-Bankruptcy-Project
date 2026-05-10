@@ -1,0 +1,131 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "b2653ca27a799c613c91",
+  "position": {
+    "x": 783,
+    "y": 0,
+    "z": 1000,
+    "height": 720,
+    "width": 497,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "treemap",
+    "query": {
+      "queryState": {
+        "Details": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+                    }
+                  },
+                  "Property": "Water Type"
+                }
+              },
+              "queryRef": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024.Water Type",
+              "nativeQueryRef": "Water Type"
+            }
+          ]
+        },
+        "Group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+                    }
+                  },
+                  "Property": "Generator Primary Technology"
+                }
+              },
+              "queryRef": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024.Generator Primary Technology",
+              "nativeQueryRef": "Generator Primary Technology",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+                        }
+                      },
+                      "Property": "Water Consumption Volume (Million Gallons)"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Cleaned Cooler_Boiler_Generator_Data_Summary_2024.Water Consumption Volume (Million Gallons))",
+              "nativeQueryRef": "Sum of Water Consumption Volume (Million Gallons)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "042729c9e520e5ac04d6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+              }
+            },
+            "Property": "Water Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fe2e42ff8d5263fd35e8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+              }
+            },
+            "Property": "Generator Primary Technology"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e219d0911c1b81dfb0f1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Cleaned Cooler_Boiler_Generator_Data_Summary_2024"
+                  }
+                },
+                "Property": "Water Consumption Volume (Million Gallons)"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

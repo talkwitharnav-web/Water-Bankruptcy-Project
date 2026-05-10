@@ -1,0 +1,26 @@
+table YearTable
+	lineageTag: 07ac10c3-de56-4764-8f50-51de1a01701f
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 86a15d31-dae3-498b-bc5a-1f2c5ca20b5e
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition YearTable = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Water Bankruptcy POWERBI\Datasetsfor Bankruptcy\Clean Datasets\YearTable.csv"),[Delimiter=",", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Year", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

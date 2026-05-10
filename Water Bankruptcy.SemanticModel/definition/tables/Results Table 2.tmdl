@@ -1,0 +1,128 @@
+table 'Results Table 2'
+	lineageTag: 062655a1-cf78-4760-9764-8c86624e567d
+
+	column 'HUC8 Subbasin'
+		dataType: int64
+		formatString: 0
+		lineageTag: cc6e2cec-ddba-4079-8e81-eea999516b1e
+		summarizeBy: sum
+		sourceColumn: HUC8 Subbasin
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Primary Purpose'
+		dataType: double
+		lineageTag: 262f8c68-afb0-425d-bbcd-6bf90b7f43f5
+		summarizeBy: sum
+		sourceColumn: Primary Purpose
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'All to Hydro'
+		dataType: double
+		lineageTag: 352444ea-8f50-4023-9c9d-2d13707b3eb5
+		summarizeBy: sum
+		sourceColumn: All to Hydro
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'None to Hydro'
+		dataType: double
+		lineageTag: f7aec156-fdb9-46c6-9ea6-92acc464e4fb
+		summarizeBy: sum
+		sourceColumn: None to Hydro
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Equal Weight'
+		dataType: double
+		lineageTag: cf2c05c1-4f79-4872-a430-3d4e5046a476
+		summarizeBy: sum
+		sourceColumn: Equal Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Centroid
+		dataType: double
+		lineageTag: 4b76df66-cd18-4e7f-9793-003980b8f13b
+		summarizeBy: sum
+		sourceColumn: Centroid
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Primary Purpose_1'
+		dataType: double
+		lineageTag: e971d412-4eeb-49ce-83af-f0edcfddd4db
+		summarizeBy: sum
+		sourceColumn: Primary Purpose_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'All to Hydro_2'
+		dataType: double
+		lineageTag: 182d16f9-d3cf-4c3e-9ac4-9a22cb2e396d
+		summarizeBy: sum
+		sourceColumn: All to Hydro_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'None to Hydro_3'
+		dataType: double
+		lineageTag: e728a825-d22a-4738-9844-9a321cfc7edc
+		summarizeBy: sum
+		sourceColumn: None to Hydro_3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Equal Weight_4'
+		dataType: double
+		lineageTag: 165a40e8-6344-4094-9d39-bc9498cc6188
+		summarizeBy: sum
+		sourceColumn: Equal Weight_4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Centroid_5
+		dataType: double
+		lineageTag: 66aed1a3-faf1-4e03-ad83-b1ec72292b2e
+		summarizeBy: sum
+		sourceColumn: Centroid_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Results Table 2' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Results Table 2.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"HUC8 Subbasin", Int64.Type}, {"Primary Purpose", type number}, {"All to Hydro", type number}, {"None to Hydro", type number}, {"Equal Weight", type number}, {"Centroid", type number}, {"Primary Purpose_1", type number}, {"All to Hydro_2", type number}, {"None to Hydro_3", type number}, {"Equal Weight_4", type number}, {"Centroid_5", type number}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

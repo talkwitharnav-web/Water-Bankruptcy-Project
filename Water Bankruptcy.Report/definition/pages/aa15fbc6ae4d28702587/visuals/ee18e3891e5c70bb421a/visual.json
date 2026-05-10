@@ -1,0 +1,340 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "ee18e3891e5c70bb421a",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 720,
+    "width": 812.5,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Water Consumption (m3)"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Input data Table 2.Water Consumption (m3))",
+              "nativeQueryRef": "Sum of Water Consumption (m3)"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Plant name"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Input data Table 2.Plant name)",
+              "nativeQueryRef": "First Plant name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Plant primary fuel code"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Input data Table 2.Plant primary fuel code)",
+              "nativeQueryRef": "First Plant primary fuel code"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Net generation (MWh)"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Input data Table 2.Net generation (MWh))",
+              "nativeQueryRef": "Sum of Net generation (MWh)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Water intensity (m3/MWh)"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Input data Table 2.Water intensity (m3/MWh))",
+              "nativeQueryRef": "Average of Water intensity (m3/MWh)"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Input data Table 2"
+                    }
+                  },
+                  "Property": "Longitude"
+                }
+              },
+              "queryRef": "Input data Table 2.Longitude",
+              "nativeQueryRef": "Longitude"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Input data Table 2"
+                    }
+                  },
+                  "Property": "Latitude"
+                }
+              },
+              "queryRef": "Input data Table 2.Latitude",
+              "nativeQueryRef": "Latitude"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sum of Water Consumption (m^3) With Plant Names, Plant Fuel Type, Sum of Net generation (MWh) and Average of Water intensity (m^3/MWh)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e381b2f58c80046f23bd",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Water Consumption (m3)"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5b869c4b67d67bca7ef6",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Plant name"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e1fe61b0d2d552c5a1da",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Plant primary fuel code"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5b6e992259d98ac4d8a0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Net generation (MWh)"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "310c6b0f0743479423ba",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Water intensity (m3/MWh)"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "efa3acb7f87dc7556a68",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Input data Table 2"
+              }
+            },
+            "Property": "Longitude"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5fbcc222092b04208b55",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Input data Table 2"
+              }
+            },
+            "Property": "Latitude"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

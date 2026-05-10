@@ -1,0 +1,387 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "43073ffcd0b8c998a917",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 720,
+    "width": 881.25,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                    }
+                  },
+                  "Property": "Unique_County"
+                }
+              },
+              "queryRef": "Cleaned USGS_AGRICULTURE_DATASET.UniqueCounty",
+              "nativeQueryRef": "Unique_County",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                        }
+                      },
+                      "Property": "PCT_GW_Reliance_Irrigation"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Cleaned USGS_AGRICULTURE_DATASET.PCT_GW_Reliance_Irrigation)",
+              "nativeQueryRef": "Average of PCT_GW_Reliance_Irrigation"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Average % of GW Used per county'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "394a17721af21bc77250",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "Cleaned USGS_AGRICULTURE_DATASET",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Or": {
+                      "Left": {
+                        "Or": {
+                          "Left": {
+                            "Or": {
+                              "Left": {
+                                "Or": {
+                                  "Left": {
+                                    "In": {
+                                      "Expressions": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "c"
+                                              }
+                                            },
+                                            "Property": "COUNTY"
+                                          }
+                                        }
+                                      ],
+                                      "Values": [
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Municipality of Anchorage County'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Fairbanks North Star Borough County'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Fairbanks North Star Borough'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Denali Borough County'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Municipality of Anchorage'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Matanuska-Susitna Borough'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Matanuska Susitna Borough County'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Kenai Peninsula Borough County'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Kenai Peninsula Borough'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'City & Borough of Juneau'"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'St James County'"
+                                            }
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  },
+                                  "Right": {
+                                    "In": {
+                                      "Expressions": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "c"
+                                              }
+                                            },
+                                            "Property": "Unique_County"
+                                          }
+                                        }
+                                      ],
+                                      "Values": [
+                                        [
+                                          {
+                                            "Literal": {
+                                              "Value": "'Ponce Municipio, PR'"
+                                            }
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "Right": {
+                                "In": {
+                                  "Expressions": [
+                                    {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "c"
+                                          }
+                                        },
+                                        "Property": "Unique_County"
+                                      }
+                                    }
+                                  ],
+                                  "Values": [
+                                    [
+                                      {
+                                        "Literal": {
+                                          "Value": "'Ponce County, PR'"
+                                        }
+                                      }
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "Right": {
+                            "In": {
+                              "Expressions": [
+                                {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "c"
+                                      }
+                                    },
+                                    "Property": "Unique_County"
+                                  }
+                                }
+                              ],
+                              "Values": [
+                                [
+                                  {
+                                    "Literal": {
+                                      "Value": "'San Lorenzo County, PR'"
+                                    }
+                                  }
+                                ]
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "Right": {
+                        "In": {
+                          "Expressions": [
+                            {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "c"
+                                  }
+                                },
+                                "Property": "Unique_County"
+                              }
+                            }
+                          ],
+                          "Values": [
+                            [
+                              {
+                                "Literal": {
+                                  "Value": "'Aleutians West Census Area, AK'"
+                                }
+                              }
+                            ]
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      },
+      {
+        "name": "4d07184a2601ed7e9bef",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+              }
+            },
+            "Property": "Unique_County"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "196c9eea7ac556848354",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                  }
+                },
+                "Property": "PCT_GW_Reliance_Irrigation"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

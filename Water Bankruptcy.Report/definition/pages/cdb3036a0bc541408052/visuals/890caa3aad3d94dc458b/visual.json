@@ -1,0 +1,137 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "890caa3aad3d94dc458b",
+  "position": {
+    "x": 640,
+    "y": 90,
+    "z": 2000,
+    "height": 628.75,
+    "width": 640,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "US_water_consumption_2000_2025"
+                    }
+                  },
+                  "Property": "Year"
+                }
+              },
+              "queryRef": "US_water_consumption_2000_2025.Year",
+              "nativeQueryRef": "Year",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "US_water_consumption_2000_2025"
+                        }
+                      },
+                      "Property": "Household Water Use (%)"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(US_water_consumption_2000_2025.Household Water Use (%))",
+              "nativeQueryRef": "Average of Household Water Use (%)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "US_water_consumption_2000_2025"
+                        }
+                      },
+                      "Property": "Industrial Water Use (%)"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(US_water_consumption_2000_2025.Industrial Water Use (%))",
+              "nativeQueryRef": "Average of Industrial Water Use (%)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "US_water_consumption_2000_2025"
+                        }
+                      },
+                      "Property": "Agricultural Water Use (%)"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(US_water_consumption_2000_2025.Agricultural Water Use (%))",
+              "nativeQueryRef": "Average of Agricultural Water Use (%)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "US_water_consumption_2000_2025"
+                      }
+                    },
+                    "Property": "Household Water Use (%)"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

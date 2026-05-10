@@ -1,0 +1,147 @@
+table cleaned_data_center_atlas
+	lineageTag: 3f829636-1df7-4fa1-8454-abb7fb052104
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 89e057ee-2bc8-41e2-bb67-b5b5fdac6776
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: 3a607889-fb3d-4b49-a560-1c2377027a52
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_abb
+		dataType: string
+		lineageTag: 7f19435f-5b97-4776-a19a-a4695fe1546d
+		summarizeBy: none
+		sourceColumn: state_abb
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 110c87f9-9cd8-49df-aa1c-935903a90c46
+		summarizeBy: sum
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column county
+		dataType: string
+		lineageTag: 3d57568c-0182-488a-a873-421da285be35
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: county
+
+		annotation SummarizationSetBy = Automatic
+
+	column county_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 28656120-fd96-4232-94c8-cdc94037fbfe
+		summarizeBy: sum
+		sourceColumn: county_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column operator
+		dataType: string
+		lineageTag: b323772c-3f8e-4e3c-9c5c-0169c7e3aae1
+		summarizeBy: none
+		sourceColumn: operator
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref
+		dataType: string
+		lineageTag: 79d0495c-a102-491b-849c-7f75246b1b3c
+		summarizeBy: none
+		sourceColumn: ref
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataCenter_Name
+		dataType: string
+		lineageTag: 5b96b8cd-3eea-416e-bf36-9a36d08c504a
+		summarizeBy: none
+		sourceColumn: DataCenter_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column sqft
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e59e721-7c6f-4f37-82f9-17b6b5b6c8ac
+		summarizeBy: sum
+		sourceColumn: sqft
+
+		annotation SummarizationSetBy = Automatic
+
+	column lon
+		dataType: double
+		lineageTag: da9e6fac-a721-4698-a009-39771fc6efbb
+		dataCategory: Longitude
+		summarizeBy: sum
+		sourceColumn: lon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lat
+		dataType: double
+		lineageTag: fb320e96-0b0d-4557-9e00-f3dd42e75a66
+		dataCategory: Latitude
+		summarizeBy: sum
+		sourceColumn: lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column type
+		dataType: string
+		lineageTag: d3523883-b6fa-41ea-8822-a9418ca95864
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Map_Location
+		dataType: string
+		lineageTag: 7119f917-2000-4fa6-a9c0-3142c242e911
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: Map_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unique_County = [county] & ", " & [state_abb]
+		lineageTag: 4fe3b5ae-072f-49e4-9fd7-cd6dc4e4e787
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cleaned_data_center_atlas = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\cleaned_data_center_atlas.csv"),[Delimiter=",", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"id", Int64.Type}, {"state", type text}, {"state_abb", type text}, {"state_id", Int64.Type}, {"county", type text}, {"county_id", Int64.Type}, {"operator", type text}, {"ref", type text}, {"name", type text}, {"sqft", Int64.Type}, {"lon", type number}, {"lat", type number}, {"type", type text}, {"Map_Location", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"name", "DataCenter_Name"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

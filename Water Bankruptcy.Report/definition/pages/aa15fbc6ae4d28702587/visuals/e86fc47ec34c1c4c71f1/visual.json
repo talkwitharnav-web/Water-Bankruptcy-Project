@@ -1,0 +1,248 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "e86fc47ec34c1c4c71f1",
+  "position": {
+    "x": 812.5,
+    "y": 277.5,
+    "z": 2000,
+    "height": 442.5,
+    "width": 467.5,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Input data Table 2"
+                    }
+                  },
+                  "Property": "Plant name"
+                }
+              },
+              "queryRef": "Input data Table 2.Plant name",
+              "nativeQueryRef": "Plant name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Input data Table 2"
+                    }
+                  },
+                  "Property": "Plant state"
+                }
+              },
+              "queryRef": "Input data Table 2.Plant state",
+              "nativeQueryRef": "Plant state"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Input data Table 2"
+                    }
+                  },
+                  "Property": "Plant primary fuel code"
+                }
+              },
+              "queryRef": "Input data Table 2.Plant primary fuel code",
+              "nativeQueryRef": "Plant primary fuel code"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Water intensity (m3/MWh)"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Input data Table 2.Water intensity (m3/MWh))",
+              "nativeQueryRef": "Average of Water intensity (m3/MWh)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Net generation (MWh)"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Input data Table 2.Net generation (MWh))",
+              "nativeQueryRef": "Sum of Net generation (MWh)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Input data Table 2"
+                        }
+                      },
+                      "Property": "Water Consumption (m3)"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Input data Table 2.Water Consumption (m3))",
+              "nativeQueryRef": "Sum of Water Consumption (m3)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Input data Table 2"
+                      }
+                    },
+                    "Property": "Water Consumption (m3)"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "300b44169d7de5b9b233",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Input data Table 2"
+              }
+            },
+            "Property": "Plant name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e158b14028f6d3a1f6d1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Input data Table 2"
+              }
+            },
+            "Property": "Plant state"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a0cde3ef6d60c412af05",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Input data Table 2"
+              }
+            },
+            "Property": "Plant primary fuel code"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4b724c363f75bfff4c7d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Water intensity (m3/MWh)"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e9d35d1858bac0bcb377",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Net generation (MWh)"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0b1a1cab3c196db52f81",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Input data Table 2"
+                  }
+                },
+                "Property": "Water Consumption (m3)"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

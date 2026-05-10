@@ -1,0 +1,199 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "d2657c5a53af00bd9c06",
+  "position": {
+    "x": 880.90909090909088,
+    "y": 415.45454545454544,
+    "z": 2000,
+    "height": 304.5454545454545,
+    "width": 399.09090909090907,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cleaned_data_center_atlas"
+                    }
+                  },
+                  "Property": "DataCenter_Name"
+                }
+              },
+              "queryRef": "cleaned_data_center_atlas.DataCenter_Name",
+              "nativeQueryRef": "DataCenter_Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                    }
+                  },
+                  "Property": "COUNTY"
+                }
+              },
+              "queryRef": "Cleaned USGS_AGRICULTURE_DATASET.COUNTY",
+              "nativeQueryRef": "COUNTY"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                    }
+                  },
+                  "Property": "STATE"
+                }
+              },
+              "queryRef": "Cleaned USGS_AGRICULTURE_DATASET.STATE",
+              "nativeQueryRef": "STATE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                    }
+                  },
+                  "Property": "PCT_GW_Reliance_Industrial"
+                }
+              },
+              "queryRef": "Sum(Cleaned USGS_AGRICULTURE_DATASET.PCT_GW_Reliance_Industrial)",
+              "nativeQueryRef": "PCT_GW_Reliance_Industrial"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                  }
+                },
+                "Property": "PCT_GW_Reliance_Industrial"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d5e19a8920ed6132f74d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+              }
+            },
+            "Property": "COUNTY"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "67a15c8ca32dd37f964f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+              }
+            },
+            "Property": "STATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e2db8b886a009ef944f5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cleaned_data_center_atlas"
+              }
+            },
+            "Property": "DataCenter_Name"
+          }
+        },
+        "type": "TopN"
+      },
+      {
+        "name": "5ad66c4c7efd7c699ca0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+              }
+            },
+            "Property": "PCT_GW_Reliance_Industrial"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

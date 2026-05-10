@@ -1,0 +1,194 @@
+table 'Input data Table 2'
+	lineageTag: 2d372bf0-dd29-4b85-bb23-248d46c23c01
+
+	column 'Plant state'
+		dataType: string
+		lineageTag: b2f5056f-a92a-4096-86e9-fe0381c410b3
+		summarizeBy: none
+		sourceColumn: Plant state
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant name'
+		dataType: string
+		lineageTag: 85d3e765-3e4e-4db6-a22a-150d0bd7bf3c
+		summarizeBy: none
+		sourceColumn: Plant name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 76df4a20-3050-4656-a453-c3c78d1fc259
+		summarizeBy: count
+		sourceColumn: Plant Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Balancing Authority Name'
+		dataType: string
+		lineageTag: be0b234d-91ee-435e-9999-6c135d57b411
+		summarizeBy: none
+		sourceColumn: Balancing Authority Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Balancing Authority Code'
+		dataType: string
+		lineageTag: c97883ad-b0eb-4440-901b-1267975f0387
+		summarizeBy: none
+		sourceColumn: Balancing Authority Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PCA Generation (MWh)'
+		dataType: double
+		lineageTag: ab8ae785-e43b-4af2-b165-844c8adb46d7
+		summarizeBy: sum
+		sourceColumn: PCA Generation (MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Latitude
+		dataType: double
+		lineageTag: 7a8a73e6-f9af-4979-a548-04bffefce0ed
+		dataCategory: Latitude
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 0a1ce619-e79a-4287-b4ce-1459f92d38e5
+		dataCategory: Longitude
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Plant primary fuel'
+		dataType: string
+		lineageTag: 4d4f11d6-361d-4d1e-bb4a-7a55f71272ae
+		summarizeBy: none
+		sourceColumn: Plant primary fuel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant primary fuel code'
+		dataType: string
+		lineageTag: a53d1b41-6338-41b2-8bf8-f650495233ea
+		summarizeBy: none
+		sourceColumn: Plant primary fuel code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net generation (MWh)'
+		dataType: double
+		lineageTag: 18803409-94e1-48e1-bde8-f39fc7832b41
+		summarizeBy: sum
+		sourceColumn: Net generation (MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'CO2-e Emission (tons)'
+		dataType: double
+		lineageTag: 0dfc7caa-62f5-4946-a1ab-ce843167a644
+		summarizeBy: sum
+		sourceColumn: CO2-e Emission (tons)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Water intensity (m3/MWh)'
+		dataType: double
+		lineageTag: 97356ff0-7886-41c6-a08e-fd9eef363227
+		summarizeBy: sum
+		sourceColumn: Water intensity (m3/MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Carbon intensity (Tons/MWh)'
+		dataType: double
+		lineageTag: 19480ed3-e5fc-4caf-9a6c-3ad44e0e1897
+		summarizeBy: sum
+		sourceColumn: Carbon intensity (Tons/MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Generation Ratio of Power plant'
+		dataType: double
+		lineageTag: 123bcae2-414e-4a07-bc63-dc718656ec3b
+		summarizeBy: sum
+		sourceColumn: Generation Ratio of Power plant
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Water Consumption (m3)'
+		dataType: double
+		lineageTag: f4d6ccdd-9a52-43ed-8ab4-2f712ca79684
+		summarizeBy: sum
+		sourceColumn: Water Consumption (m3)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Subbasin
+		dataType: string
+		lineageTag: 51ec40cd-e0b3-4767-8c2b-1ac1bf83050f
+		summarizeBy: none
+		sourceColumn: Subbasin
+
+		annotation SummarizationSetBy = Automatic
+
+	column HUC8
+		dataType: int64
+		formatString: 0
+		lineageTag: b2107e19-eaa4-4a07-98b8-b6ed8ff2575b
+		summarizeBy: sum
+		sourceColumn: HUC8
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HUC8 ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: f328add4-5d4f-4c29-bc5c-246a672e02f0
+		summarizeBy: none
+		sourceColumn: HUC8 ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Input data Table 2' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Input data Table 2.csv"),[Delimiter=",", Columns=19, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}, {"Column13", type text}, {"Column14", type text}, {"Column15", type text}, {"Column16", type text}, {"Column17", type text}, {"Column18", type text}, {"Column19", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Plant state", type text}, {"Plant name", type text}, {"Plant Id", Int64.Type}, {"Balancing Authority Name", type text}, {"Balancing Authority Code", type text}, {"PCA Generation (MWh)", type number}, {"Latitude", type number}, {"Longitude", type number}, {"Plant primary fuel", type text}, {"Plant primary fuel code", type text}, {"Net generation (MWh)", type number}, {"CO2-e Emission (tons)", type number}, {"Water intensity (m3/MWh)", type number}, {"Carbon intensity (Tons/MWh)", type number}, {"Generation Ratio of Power plant", type number}, {"Water Consumption (m3)", type number}, {"Subbasin", type text}, {"HUC8", Int64.Type}, {"HUC8 ID", Int64.Type}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

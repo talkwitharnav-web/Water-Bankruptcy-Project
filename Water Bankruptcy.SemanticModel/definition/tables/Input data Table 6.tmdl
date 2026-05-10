@@ -1,0 +1,58 @@
+table 'Input data Table 6'
+	lineageTag: 1188d2e4-73c0-4d42-8075-981b783e88d4
+
+	column State
+		dataType: string
+		lineageTag: eb75f8ab-8d94-4dd4-9696-93131220b389
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water intensity (m3/MWh)'
+		dataType: double
+		lineageTag: a9c221a0-5492-4ef2-ac49-b331ce53d280
+		summarizeBy: sum
+		sourceColumn: Water intensity (m3/MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Emission intensity (m3/MWh)'
+		dataType: double
+		lineageTag: 392630de-b898-49e5-899d-1956f046209f
+		summarizeBy: sum
+		sourceColumn: Emission intensity (m3/MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Scaled Power Consumption (MWh)'
+		dataType: double
+		lineageTag: 996bbda2-6e91-47ca-92db-69f317f43630
+		summarizeBy: sum
+		sourceColumn: Scaled Power Consumption (MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Input data Table 6' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\SI_XLS\Input data Table 6.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"State", type text}, {"Water intensity (m3/MWh)", type number}, {"Emission intensity (m3/MWh)", type number}, {"Scaled Power Consumption (MWh)", type number}}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type1", {"State"})
+				in
+				    #"Removed Errors"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

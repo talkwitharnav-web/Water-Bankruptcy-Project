@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "9948825f81671698f308",
+  "displayName": "Industrial Water Use (GW) 2000-2015",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

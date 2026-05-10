@@ -1,0 +1,173 @@
+table 'Cleaned Cooler_Boiler_Generator_Data_Summary_2024'
+	lineageTag: dbeb6234-1ba9-43a3-8745-b6bb2d1acad0
+
+	column State
+		dataType: string
+		lineageTag: 0468c5e7-f31b-4dfd-a31e-2863ab96b8e2
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Name'
+		dataType: string
+		lineageTag: 5c0930ad-0c8a-4d38-89fe-d423897a41d1
+		summarizeBy: none
+		sourceColumn: Plant Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: f7f98723-fb10-4e13-a0c2-7b7ff9335590
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ad8c527-7af4-4aee-bdb2-95f28a799fde
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Generator Primary Technology'
+		dataType: string
+		lineageTag: faa3e152-575d-4811-9a86-855de6c61fa9
+		summarizeBy: none
+		sourceColumn: Generator Primary Technology
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net Generation from Steam Turbines (MWh)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 222ca7ae-8ff1-4c31-8d42-d69d559d3c3c
+		summarizeBy: sum
+		sourceColumn: Net Generation from Steam Turbines (MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fuel Consumption from All Fuel Types (MMBTU)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 80062a47-4845-40d2-b147-bb2802407814
+		summarizeBy: sum
+		sourceColumn: Fuel Consumption from All Fuel Types (MMBTU)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Consumption Volume (Million Gallons)'
+		dataType: double
+		lineageTag: a6595ad0-b128-42cf-9453-c3dd0ca68bfe
+		summarizeBy: sum
+		sourceColumn: Water Consumption Volume (Million Gallons)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Water Withdrawal Intensity Rate (Gallons / MWh)'
+		dataType: int64
+		formatString: 0
+		lineageTag: e9628193-1fee-49f0-9782-a8953ed31039
+		summarizeBy: sum
+		sourceColumn: Water Withdrawal Intensity Rate (Gallons / MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Consumption Intensity Rate (Gallons / MWh)'
+		dataType: int64
+		formatString: 0
+		lineageTag: e64c2efd-e11d-4eca-91cb-3c289f88c534
+		summarizeBy: sum
+		sourceColumn: Water Consumption Intensity Rate (Gallons / MWh)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Withdrawal Rate per Fuel Consumption (Gallons / MMBTU)'
+		dataType: int64
+		formatString: 0
+		lineageTag: b1fe55ba-2466-4e2f-86a3-da595c56749a
+		summarizeBy: sum
+		sourceColumn: Water Withdrawal Rate per Fuel Consumption (Gallons / MMBTU)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Consumption Rate per Fuel Consumption (Gallons / MMBTU)'
+		dataType: int64
+		formatString: 0
+		lineageTag: f9c528d3-7185-4780-ae41-625696930211
+		summarizeBy: sum
+		sourceColumn: Water Consumption Rate per Fuel Consumption (Gallons / MMBTU)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cooling Unit Hours in Service'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e967d2b-d935-48cc-bf88-a38b1a925e6e
+		summarizeBy: sum
+		sourceColumn: Cooling Unit Hours in Service
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Average Distance of Water Intake Below Water Surface (Feet)'
+		dataType: int64
+		formatString: 0
+		lineageTag: c2d556b4-464a-49b9-ba6b-c0bb4833d30b
+		summarizeBy: sum
+		sourceColumn: Average Distance of Water Intake Below Water Surface (Feet)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Type'
+		dataType: string
+		lineageTag: 5380300e-be7a-4984-beb8-86cb436ab85b
+		summarizeBy: none
+		sourceColumn: Water Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Source'
+		dataType: string
+		lineageTag: d26463a8-bd0f-4d30-99b7-744759805a53
+		summarizeBy: none
+		sourceColumn: Water Source
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Source Name'
+		dataType: string
+		lineageTag: 66f7a4e4-fb58-4be8-998d-e71308e1af3d
+		summarizeBy: none
+		sourceColumn: Water Source Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Water Discharge Name'
+		dataType: string
+		lineageTag: cda95f84-a4e7-47cf-a4ef-c133bce8571c
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: Water Discharge Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Cleaned Cooler_Boiler_Generator_Data_Summary_2024' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\arnav\Downloads\Datasetsfor Bankruptcy\Clean Datasets\Cleaned Cooler_Boiler_Generator_Data_Summary_2024.csv"),[Delimiter=",", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"State", type text}, {"Plant Name", type text}, {"Year", Int64.Type}, {"Month", Int64.Type}, {"Generator Primary Technology", type text}, {"Net Generation from Steam Turbines (MWh)", Int64.Type}, {"Fuel Consumption from All Fuel Types (MMBTU)", Int64.Type}, {"Water Consumption Volume (Million Gallons)", type number}, {"Water Withdrawal Intensity Rate (Gallons / MWh)", Int64.Type}, {"Water Consumption Intensity Rate (Gallons / MWh)", Int64.Type}, {"Water Withdrawal Rate per Fuel Consumption (Gallons / MMBTU)", Int64.Type}, {"Water Consumption Rate per Fuel Consumption (Gallons / MMBTU)", Int64.Type}, {"Cooling Unit Hours in Service", Int64.Type}, {"Average Distance of Water Intake Below Water Surface (Feet)", Int64.Type}, {"Water Type", type text}, {"Water Source", type text}, {"Water Source Name", type text}, {"Water Discharge Name", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

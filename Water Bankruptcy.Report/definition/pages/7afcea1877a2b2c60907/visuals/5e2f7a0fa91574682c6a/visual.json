@@ -1,0 +1,151 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "5e2f7a0fa91574682c6a",
+  "position": {
+    "x": 881.25,
+    "y": 427.5,
+    "z": 2000,
+    "height": 292.5,
+    "width": 398.75,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                    }
+                  },
+                  "Property": "COUNTY"
+                }
+              },
+              "queryRef": "Cleaned USGS_AGRICULTURE_DATASET.COUNTY",
+              "nativeQueryRef": "COUNTY"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                    }
+                  },
+                  "Property": "STATE"
+                }
+              },
+              "queryRef": "Cleaned USGS_AGRICULTURE_DATASET.STATE",
+              "nativeQueryRef": "STATE"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                        }
+                      },
+                      "Property": "PCT_GW_Reliance_Irrigation"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Cleaned USGS_AGRICULTURE_DATASET.PCT_GW_Reliance_Irrigation)",
+              "nativeQueryRef": "Average of PCT_GW_Reliance_Irrigation"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                      }
+                    },
+                    "Property": "PCT_GW_Reliance_Irrigation"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6f349ede9e221effeef9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+              }
+            },
+            "Property": "COUNTY"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "44aab2e74a9bfedb1aa2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+              }
+            },
+            "Property": "STATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1b4607dd4238a8569f3e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Cleaned USGS_AGRICULTURE_DATASET"
+                  }
+                },
+                "Property": "PCT_GW_Reliance_Irrigation"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
