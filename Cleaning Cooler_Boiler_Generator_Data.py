@@ -16,24 +16,24 @@ df.columns = df.columns.str.strip()
 print(df.columns)
 # Keeping columns needed for analysis and dropping rest.
 columns_to_keep = [
-    "State", 
-    "Plant Name", 
-    "Year", 
-    "Month", 
-    "Generator Primary Technology", 
-    "Net Generation from Steam Turbines (MWh)", 
-    "Fuel Consumption from All Fuel Types (MMBTU)", 
-    "Water Consumption Volume (Million Gallons)", 
-    "Water Withdrawal Intensity Rate (Gallons / MWh)", 
-    "Water Consumption Intensity Rate (Gallons / MWh)", 
-    "Water Withdrawal Rate per Fuel Consumption (Gallons / MMBTU)", 
-    "Water Consumption Rate per Fuel Consumption (Gallons / MMBTU)", 
-    "Cooling Unit Hours in Service", 
-    "Average Distance of Water Intake Below Water Surface (Feet)", 
-    "Water Type", 
-    "Water Source", 
-    "Water Source Name", 
-    "Water Discharge Name"
+                    "State", 
+                    "Plant Name", 
+                    "Year", 
+                    "Month", 
+                    "Generator Primary Technology", 
+                    "Net Generation from Steam Turbines (MWh)", 
+                    "Fuel Consumption from All Fuel Types (MMBTU)", 
+                    "Water Consumption Volume (Million Gallons)", 
+                    "Water Withdrawal Intensity Rate (Gallons / MWh)", 
+                    "Water Consumption Intensity Rate (Gallons / MWh)", 
+                    "Water Withdrawal Rate per Fuel Consumption (Gallons / MMBTU)", 
+                    "Water Consumption Rate per Fuel Consumption (Gallons / MMBTU)", 
+                    "Cooling Unit Hours in Service", 
+                    "Average Distance of Water Intake Below Water Surface (Feet)", 
+                    "Water Type", 
+                    "Water Source", 
+                    "Water Source Name", 
+                    "Water Discharge Name"
 ]
 df = df[columns_to_keep]
 # Remove rows where any of these columns have no value: Water Consumption Volume (Million Gallons),
@@ -77,7 +77,7 @@ skewed_columns = [
     "Water Consumption Rate per Fuel Consumption (Gallons / MMBTU)"]
 
 for column in skewed_columns:
-    upper_limit = df[column].quantile(0.99)
+    upper_limit = df[column].quantile(0.99) # Credit to Gemini for this line of code
     df = df[df[column] <= upper_limit]
 print(df.head(40))
 # Exporting cleaned dataset to Clean Datasets folder

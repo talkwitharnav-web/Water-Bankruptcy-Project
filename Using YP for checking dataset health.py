@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).parent
 DATA_FILE = BASE_DIR / "Clean Datasets" / "US_water_consumption_2000_2025.csv"
 # Getting file size in MB to determine how much yp should dig into the dataset
 # .stat().st_size gets file size in bytes. We divide by 1024 twice to get it into MB.
-FILE_SIZE_MB = DATA_FILE.stat().st_size / (1024 * 1024)
+FILE_SIZE_MB = DATA_FILE.stat().st_size / (1024 * 1024) # Credit to Gemini for this line of code
 # Defining where the report should be saved
 REPORT_DIR = BASE_DIR / "HTML reports by yp"
 df = pd.read_csv(DATA_FILE)
@@ -44,6 +44,6 @@ else:
 # Creating ProfileReport object with our three arguements. yp automatically looks for this class and generates the report
 # based on the arguements we give it.
 # .stem just gives the name of the file without file type, makes it look cleaner
-profile = ProfileReport(df, title=f"Health Check for {DATA_FILE.stem}", minimal = minimal)
+profile = ProfileReport(df, title=f"Health Check for {DATA_FILE.stem}", minimal = minimal) # Credit to Gemini for this line of code
 output_path = REPORT_DIR / f"{DATA_FILE.stem}_report.html"
 profile.to_file(output_path)

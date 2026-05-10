@@ -34,6 +34,7 @@ print(df.head(50))
 df = df.dropna(subset=["Public_Supply_GW", "Public_Supply_SW", "Public_Supply",
                                 "Industrial_GW", "Industrial_SW", "Industrial",
                                 "Irrigation_GW", "Irrigation_SW", "Irrigation"])
+# "~" is a NOT operator, so we are keeping rows that DO NOT have a 0 in all three columns specified
 df = df[~((df["Public_Supply_GW"] ==0) & (df["Public_Supply_SW"]==0) & (df["Public_Supply"] == 0))]
 print(df.head(50))
 df = df[~((df["Industrial_GW"] ==0) & (df["Industrial_SW"]==0) & (df["Industrial"] == 0))]

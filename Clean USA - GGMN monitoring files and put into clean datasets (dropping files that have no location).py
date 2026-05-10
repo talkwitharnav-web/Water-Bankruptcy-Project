@@ -19,7 +19,7 @@ all_files = list(DATA_FILE.glob("*.ods"))
     Also unit="file" just tells tqdm that instead of displaying rate of progress as "it/s" (iterations per second)
     it should display as "file/s" so it's just more readable.
 """
-for filepath in tqdm(all_files, unit="file"):
+for filepath in tqdm(all_files, unit="file"): # Credit to Gemini for the tqdm part of this line
     # try catch block for safety
     try:
         df = pd.read_excel(filepath,
@@ -30,7 +30,7 @@ for filepath in tqdm(all_files, unit="file"):
         # Converting the specified cell to text and using if block
         if str(df.iloc[0,1]).strip().lower() == "name":
             # If the cell does contain "name", we copy paste it because we need location in our fileset, also copy2 preserves EVERYTHING raw
-            shutil.copy2(filepath, CLEAN_DATASET_DIR / filepath.name)
+            shutil.copy2(filepath, CLEAN_DATASET_DIR / filepath.name) # Credit to Gemini for this line of Code
     except:
         # If file doesn't cooperate, skip it
         pass

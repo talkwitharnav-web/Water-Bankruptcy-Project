@@ -9,10 +9,10 @@ DATA_FILE = BASE_DIR / "Raw Datasets" / "USDA NASS SPREADSHEET.csv"
 df = pd.read_csv(DATA_FILE)
 print(df.head())
 
-
 # Dropping rows that contain either "(D) or (H)" in the value or cv column
 # We do this by making a mask (true or false value for each row), using that mask we filter out the true rows and keep false
 # We check if (D) OR (H) is in the strings of both columns
+# Credit to Gemini for making the mask
 mask = (
     df['Value'].astype(str).str.contains(r'\(D\)|\(H\)', na=False) | 
     df['CV (%)'].astype(str).str.contains(r'\(D\)|\(H\)', na=False)
@@ -31,7 +31,7 @@ print(df.head())
 
 # Now the issue is that our watershed column holds some state names for some reason, so we want to merge those
 # presumably state names into the state column and then drop the watershed column. First we need to find
-# the row index of last value in states and row index of first value in watershed so we can merge.
+# the row index of last value in states and row index of first value in watershed so we can merge
 last_index_state = df['State'].last_valid_index()
 print(last_index_state)
 first_index_watershed = df['Watershed'].first_valid_index()
@@ -41,6 +41,9 @@ last_index_overall = df.index[-1]
 print(last_index_overall)
 # Now we merge the watershed names into the states columns only AFTER the LAST VALUE in the states column
 # But we also have to merge up till last overall index
+# Credit to Gemini for this line of code
+# .loc lets us specify a range of rows and columns to update, in our case we specify rows from
+# last index of state to last index overall, and we specify the state column to be changed.
 df.loc[last_index_state + 1 : last_index_overall, 'State'] = df.loc[last_index_state + 1 : last_index_overall, 'Watershed']
 # Now that it is done, we can drop the watershed column and export
 df = df.drop(columns=['Watershed'])
